@@ -12,8 +12,8 @@ import python_utils_JSHEPT
 from python_utils_JSHEPT import get_plot_WaveletAnalysis_of_var_vect, wavelet_reconstruction
 
 sys.path.append(r'E:/Research/Program/SuperiorSolarConjunction')
-import frequency_analyse_utils
-from frequency_analyse_utils import convert_to_second_of_day, convert_to_HHMM, \
+import utils_signal_analyse
+from utils_signal_analyse import convert_to_second_of_day, convert_to_HHMM, \
     eliminate_outliers, interpolate, detrend, log_linear_fit
 
 ## import data

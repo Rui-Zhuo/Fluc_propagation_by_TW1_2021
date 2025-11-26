@@ -11,6 +11,7 @@ df = excel_file.parse(sheet_name)
 
 case_ind = df['case']
 rs = df['rs']
+vp = df['vp']
 station = df['station']
 f_prime = df['f_prime']
 N_prime = df['N_prime']
@@ -24,6 +25,10 @@ mask_inte = (method == 'integral')
 
 rs_peak = rs[mask_peak]
 rs_inte = rs[mask_inte]
+vp_peak = vp[mask_peak]
+vp_inte = vp[mask_inte]
+n0_peak = n0[mask_peak]
+n0_inte = n0[mask_inte]
 f_prime_peak, N_prime_peak, n_prime_peak, npn0_peak = \
     f_prime[mask_peak], N_prime[mask_peak], n_prime[mask_peak], npn0[mask_peak]
 f_prime_inte, N_prime_inte, n_prime_inte, npn0_inte = \
@@ -144,6 +149,49 @@ plt.xscale('log')
 plt.yscale('log')
 plt.xlabel('Heliocentric distance [Rs]')
 plt.ylabel('Fractional density fluctuation')
+
+def calc_energe_flux(n0, vp, npn0):
+    '''
+    Calculate the energe flux based on the formula provided by Maoli Ma
+    
+    Input:
+    - n0: background density, in [cm-3]
+    - vp: phase velocity, in [km/s]
+    '''
+    mp = 1.6726231e-27
+    n0_SI = n0 * 1e6
+    vp_SI = vp * 1e3
+    Fe = 1/2 * n0_SI * mp * vp_SI ** 3 * npn0 ** 2 # [W/m2] 
+    
+    return Fe
+
+Fe_inte = calc_energe_flux(n0_inte, vp_inte, npn0_inte)
+Fe_inte_arr = np.array(Fe_inte)
+Fe_12, Fe_3, Fe_45 = Fe_inte_arr[:2*3], Fe_inte_arr[2*3:3*3], Fe_inte_arr[3*3:]
+Fe_mean_12, Fe_std_12 = calc_mean_std(Fe_12)
+Fe_mean_3, Fe_std_3 = calc_mean_std(Fe_3)
+Fe_mean_45, Fe_std_45 = calc_mean_std(Fe_45)
+
+Fe_slope, Fe_intercept, Fe_fit, Fe_corr, Fe_p \
+    = log_poly__fit([rs_12, rs_3, rs_45], [Fe_mean_12, Fe_mean_3, Fe_mean_45])
+    
+plt.figure()
+plt.rcParams['font.family'] = 'Helvetica'
+plt.rcParams['font.size'] = 16
+
+ax1 = plt.subplot(111)
+plt.scatter(rs_inte, Fe_inte, color='b')
+# plt.plot([rs_3, rs_12, rs_45], [Fe_fit[1], Fe_fit[0], Fe_fit[2]], color='k')
+plt.errorbar(rs_12, Fe_mean_12, yerr=Fe_std_12, fmt='o', color='r', capsize=10)
+plt.errorbar(rs_3,  Fe_mean_3,  yerr=Fe_std_3,  fmt='o', color='r', capsize=10)
+plt.errorbar(rs_45, Fe_mean_45, yerr=Fe_std_45, fmt='o', color='r', capsize=10)
+# mark_text(ax1, Fe_slope, Fe_intercept, Fe_corr, n_pirme_p)
+plt.xlim([5,20])
+# plt.ylim([1e2,1e4])
+plt.xscale('log')
+plt.yscale('log')
+plt.xlabel('Heliocentric distance [Rs]')
+plt.ylabel('Energe Flux [W/m-2]')
 
 plt.show()
 

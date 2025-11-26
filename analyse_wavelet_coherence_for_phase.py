@@ -9,8 +9,8 @@ import sys
 import statistics
 import matplotlib as mpl
 
-import frequency_analyse_utils
-from frequency_analyse_utils import convert_to_second_of_day, convert_to_HHMM, \
+import utils_signal_analyse
+from utils_signal_analyse import convert_to_second_of_day, convert_to_HHMM, \
     eliminate_outliers, interpolate, detrend
 
 ## Selecting station pair and time interval

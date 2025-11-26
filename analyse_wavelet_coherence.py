@@ -9,8 +9,8 @@ import sys
 import statistics
 import matplotlib as mpl
 
-import frequency_analyse_utils
-from frequency_analyse_utils import convert_to_second_of_day, convert_to_HHMM, \
+import utils_signal_analyse
+from utils_signal_analyse import convert_to_second_of_day, convert_to_HHMM, \
     eliminate_outliers, interpolate, detrend
 
 ## Selecting station pair and time interval
@@ -103,7 +103,7 @@ elif i_date == 9: # 2021/10/04(277), 05:40-08:20, Js-Bd, Bd-Yg(4s), Yg-Hh(4s); B
     file_Hh = 'HhHhchan3_1frephase1s.dat' # 05:43-08:20, 1s/2s/4s
     file1_name = file_Js
     file2_name = file_Bd
-    time_beg = 2021277072000
+    time_beg = 2021277080000
     time_end = 2021277082000
 elif i_date == 10: # 2021/10/05(278), 09:50-12:20, Hh-Mc, Hh-Ys, Mc-Ys
     file_dir = 'E:/Research/Data/Tianwen-1/m1a05x/'
@@ -287,8 +287,8 @@ freq2_sub = freq2[ind2_sub]
 freq1_out, sod1_out = eliminate_outliers(freq1_sub, sod1_sub, 10) #10
 freq2_out, sod2_out = eliminate_outliers(freq2_sub, sod2_sub, 10) #10
 # step 2: detrend for frequency sequence
-freq1_fit, freq1_detrend = detrend(freq1_out, sod1_out, 9) #3,5,7,9,11
-freq1_fit, freq2_detrend = detrend(freq2_out, sod2_out, 9) #3,5,7,9,11
+freq1_fit, freq1_detrend = detrend(freq1_out, sod1_out, 5) #3,5,7,9,11
+freq1_fit, freq2_detrend = detrend(freq2_out, sod2_out, 5) #3,5,7,9,11
 # step 3: interpolation for frequency sequence
 freq1_interp = interpolate(freq1_detrend, sod1_out, sod1_sub)
 freq2_interp = interpolate(freq2_detrend, sod2_out, sod2_sub)
@@ -438,7 +438,8 @@ elif plot_option == 1:
     plt.subplot(2, 1, 1)
     # Plotting wavelet coherency spectrum
     X, Y = np.meshgrid(coh.time, coh.scale)
-    contour_plot = plt.contourf(X, Y, np.flipud(np.rot90(coh.wtc)), cmap='jet', vmin=0, vmax=1)
+    levels = np.linspace(0, 1, 11)
+    contour_plot = plt.contourf(X, Y, np.flipud(np.rot90(coh.wtc)), levels=levels, cmap='jet', vmin=0, vmax=1)
     cbar1 = plt.colorbar()
     cbar1.set_label('WTC')
     # Plotting Cone of Influence
@@ -458,8 +459,10 @@ elif plot_option == 1:
     plt.subplot(2, 1, 2)
     # Plotting time lag spectrum
     X, Y = np.meshgrid(coh.time, coh.scale)
-    contour_plot = plt.contourf(X, Y, time_lag, cmap='RdBu', vmin=-np.max(np.abs(time_lag)), vmax=np.max(np.abs(time_lag)))
-    contour_line = plt.contour(X, Y, time_lag, colors='k', linewidths=0.3)
+    levels = np.linspace(-30, 30, 7)
+    contour_plot = plt.contourf(X, Y, time_lag, levels=levels, cmap='RdBu', vmin=-np.max(np.abs(time_lag)), vmax=np.max(np.abs(time_lag)))
+    # contour_plot = plt.pcolormesh(X, Y, time_lag, cmap='RdBu', shading='gouraud', vmin=-np.max(np.abs(time_lag)), vmax=np.max(np.abs(time_lag)))
+    contour_line = plt.contour(X, Y, time_lag, colors='gray', linewidths=1)
     cbar = plt.colorbar(contour_plot)
     cbar.set_label('Lag [s]')
     # Plotting Cone of Influence
@@ -474,7 +477,7 @@ elif plot_option == 1:
     plt.legend(loc='upper right')
     
     # Setting X-labels
-    xposs = [0, 1/6, 2/6, 3/6, 4/6, 5/6, 1]
+    xposs = [0, 1/4, 2/4, 3/4, 1]
     xticks = [int(xpos*(sod_end-sod_beg)+sod_beg) for xpos in xposs]
     xlabels = [convert_to_HHMM(xtick) for xtick in xticks]
     plt.xticks(xticks, labels=xlabels)
