@@ -5,7 +5,7 @@ from matplotlib.colors import LogNorm
 import matplotlib as mpl
 
 # Importing data
-file_dir = 'E:/Research/Work/tianwen_IPS/'
+file_dir = 'E:/Research/Work/Fluc_propagation_by_TW1_2021/'
 file_name = 'wavelet_coherence.xlsx'
 
 data = pd.ExcelFile(file_dir + file_name)
@@ -78,3 +78,5 @@ plt.xlabel('spatial scale of inward propagation [km]')
 plt.ylabel('counts')
 
 plt.show()
+
+db
