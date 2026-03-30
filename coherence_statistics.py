@@ -4,6 +4,7 @@ import matplotlib.pyplot as plt
 from matplotlib.colors import LogNorm
 import matplotlib as mpl
 import matplotlib.ticker as ticker 
+from datetime import datetime
 
 # Importing data
 file_dir = 'E:/Research/Work/Fluc_propagation_by_TW1_2021/'
@@ -21,11 +22,46 @@ int_time = df_coh['integral_time']
 coh_time, scale = df_coh['coh_time'], df_coh['scale']
 lag, vel, sign, vel_type  = df_coh['lag'], df_coh['vel'], df_coh['sign'], df_coh['type']
 
-# Eliminating fallible data with 'lag < integral_time'
+def convert_to_epoch(date, coh_time, year):
+    date_str = str(date).zfill(4)
+    time_str = str(coh_time).zfill(4)
+    
+    month = int(date_str[:2])
+    day = int(date_str[2:])
+    hour = int(time_str[:2])
+    minute = int(time_str[2:])
+    
+    dt = datetime(year=year, month=month, day=day, hour=hour, minute=minute, second=0)
+    epoch = int(dt.timestamp())
+    
+    return epoch
+
+incoh_epoch_1 = convert_to_epoch('1019', '0000', 2021)
+incoh_epoch_2 = convert_to_epoch('1019', '0410', 2021) # between 1-2 is coherent state (should be removed)
+incoh_epoch_3 = convert_to_epoch('1019', '0540', 2021)
+incoh_epoch_4 = convert_to_epoch('1019', '2359', 2021) # between 3-4 is coherent state (should be removed)
+incoh_epoch_5 = convert_to_epoch('1020', '0000', 2021)
+incoh_epoch_6 = convert_to_epoch('1020', '0120', 2021) # between 5-6 is coherent state (should be removed)
+incoh_epoch_7 = convert_to_epoch('1020', '0240', 2021)
+incoh_epoch_8 = convert_to_epoch('1020', '0500', 2021) # between 7-8 is coherent state (should be removed)
+incoh_epoch_9 = convert_to_epoch('1020', '0540', 2021)
+incoh_epoch_10 = convert_to_epoch('1020', '2359', 2021) # between 9-10 is coherent state (should be removed)
+
+# Eliminating fallible data
 for i_case in range(len(lag)):
-    if np.abs(lag[i_case]) < int_time[i_case]:
+    
+    if np.abs(lag[i_case]) < int_time[i_case]: # lag < integral_time
         vel[i_case] = np.nan
-    if scale[i_case] < 100:
+    
+    # if scale[i_case] < 100: # scale < 100s
+    #     vel[i_case] = np.nan
+    
+    epoch = convert_to_epoch(date[i_case], coh_time[i_case], 2021)
+    if (incoh_epoch_1 < epoch < incoh_epoch_2 or
+        incoh_epoch_3 < epoch < incoh_epoch_4 or
+        incoh_epoch_5 < epoch < incoh_epoch_6 or
+        incoh_epoch_7 < epoch < incoh_epoch_8 or
+        incoh_epoch_9 < epoch < incoh_epoch_10):# coherent state
         vel[i_case] = np.nan
 
 # Defining radial-positive velocity
@@ -50,13 +86,13 @@ so_qt, scale_qt, vel_qt = so[ind_qt], scale[ind_qt], vel_sign[ind_qt]
 # Counting inward and outward propagation
 num_outward = np.sum(np.array(vel_qr) > 0)
 num_inward = np.sum(np.array(vel_qr) < 0)
-outward_perc = num_outward / (num_outward + num_inward)# 87.9%
+outward_perc = num_outward / (num_outward + num_inward) # 84.6%
 
 ############################################################################################
 
 def plot_distrib_hist2d(fig, ax, x, y, 
                         bins_x, bins_y, range_x, range_y, xlabel, ylabel, 
-                        cmap='jet', cmin=1, 
+                        cmap='jet', cmin=1, fontsize=10, 
                         add_hline=False, hline_y=0,
                         add_vline=False, vline_x=0):
     hist = ax.hist2d(x, y, 
@@ -64,18 +100,22 @@ def plot_distrib_hist2d(fig, ax, x, y,
                      range=[range_x, range_y], 
                      cmap=cmap, 
                      cmin=cmin)
-    cbar = fig.colorbar(hist[3], ax=ax, label='counts')
+    cbar = fig.colorbar(hist[3], ax=ax)
+    cbar.set_label('counts', fontsize=fontsize)
     cbar.ax.yaxis.set_major_locator(ticker.MaxNLocator(integer=True))
+    cbar.ax.tick_params(labelsize=fontsize)
     
     if add_vline:
         ax.axvline(x=vline_x, color='k', linewidth=2)
     if add_hline:
         ax.axhline(y=hline_y, color='k', linewidth=2)
     
+    ax.tick_params(axis='both', which='both', direction='in')
     ax.set_xlim(range_x)
     ax.set_ylim(range_y)
-    ax.set_xlabel(xlabel)
-    ax.set_ylabel(ylabel)
+    ax.set_xlabel(xlabel, fontsize=fontsize)
+    ax.set_ylabel(ylabel, fontsize=fontsize)
+    ax.tick_params(axis='both', which='major', labelsize=fontsize)
     return
 
 def plot_distrib_scatter(fig, ax, x, y, z, 
@@ -140,25 +180,25 @@ def plot_binned_stats(fig, ax, x, y,
     return
 
 ############################################################################################
-# Plotting quasi-radial velocity distribution (hist2d: vel vs scale)
+# # Plotting quasi-radial velocity distribution (hist2d: vel vs scale)
 
-fig1, ax1 = plt.subplots(figsize=(8, 6))
-plot_distrib_hist2d(
-    fig=fig1,
-    ax=ax1,
-    x=vel_qr,
-    y=scale_qr,
-    bins_x=40,
-    bins_y=40,
-    range_x=[-1000, 1000],
-    range_y=[0, 800],
-    xlabel='$v_{proj}$ (km/s)',
-    ylabel='Scale (s)',
-    add_vline=True, 
-    vline_x=0
-)
-ax1.set_title('Along quasi-radial baselines')
-plt.tight_layout()
+# fig1, ax1 = plt.subplots(figsize=(8, 6))
+# plot_distrib_hist2d(
+#     fig=fig1,
+#     ax=ax1,
+#     x=vel_qr,
+#     y=scale_qr,
+#     bins_x=40,
+#     bins_y=40,
+#     range_x=[-1000, 1000],
+#     range_y=[0, 800],
+#     xlabel='$v_{proj}$ (km/s)',
+#     ylabel='Scale (s)',
+#     add_vline=True, 
+#     vline_x=0
+# )
+# ax1.set_title('Along quasi-radial baselines')
+# plt.tight_layout()
 
 ############################################################################################
 # Plotting inclined and quasi-latitudinal velocity distribution (hist2d: vel vs scale)
@@ -168,52 +208,52 @@ fig2, (ax2_1, ax2_2) = plt.subplots(1, 2, figsize=(14, 6))
 plot_distrib_hist2d(
     fig=fig2,
     ax=ax2_1,
-    x=np.abs(vel_ic),
-    y=scale_ic,
-    bins_x=20,
-    bins_y=40,
-    range_x=[0, 1000],
-    range_y=[0, 800],
-    xlabel='|$v_{proj}$| (km/s)',
-    ylabel='Scale (s)'
+    x=scale_ic,
+    y=np.abs(vel_ic),
+    bins_x=40,
+    bins_y=20,
+    range_x=[0, 800],
+    range_y=[0, 1000],
+    xlabel='Scale (s)',
+    ylabel='|$v_{proj}$| (km/s)'
 )
-ax2_1.set_title('Along oblique baselines')
+ax2_1.set_title('velocity distribution with scale (oblique)')
 
 plot_distrib_hist2d(
     fig=fig2,
     ax=ax2_2,
-    x=np.abs(vel_qt),
-    y=scale_qt,
-    bins_x=10,
-    bins_y=20,
-    range_x=[0, 1000],
-    range_y=[0, 800],
-    xlabel='|$v_{proj}$| (km/s)',
-    ylabel='Scale (s)'
+    x=so_ic,
+    y=np.abs(vel_ic),
+    bins_x=20,
+    bins_y=10,
+    range_x=[0, 30],
+    range_y=[0, 1000],
+    xlabel='Solar Offset (Rs)',
+    ylabel='|$v_{proj}$| (km/s)'
 )
-ax2_2.set_title('Along quasi-latitudinal baselines')
+ax2_2.set_title('velocity distribution with solar-offset (oblique)')
 
 plt.tight_layout()
 
 ############################################################################################
-# 3. Plotting quasi-radial velocity distribution (hist2d: vel vs solar-offset)
-fig3, ax3 = plt.subplots(figsize=(8, 6))
-plot_distrib_hist2d(
-    fig=fig3,
-    ax=ax3,
-    x=vel_qr,
-    y=so_qr,
-    bins_x=40,
-    bins_y=15,
-    range_x=[-1000, 1000],
-    range_y=[0, 30],
-    xlabel='$v_{proj}$ (km/s)',
-    ylabel='Solar Offset (Rs)',
-    add_vline=True,
-    vline_x=0
-)
-ax3.set_title('Along quasi-radial baselines')
-plt.tight_layout()
+# # 3. Plotting quasi-radial velocity distribution (hist2d: vel vs solar-offset)
+# fig3, ax3 = plt.subplots(figsize=(8, 6))
+# plot_distrib_hist2d(
+#     fig=fig3,
+#     ax=ax3,
+#     x=vel_qr,
+#     y=so_qr,
+#     bins_x=40,
+#     bins_y=15,
+#     range_x=[-1000, 1000],
+#     range_y=[0, 30],
+#     xlabel='$v_{proj}$ (km/s)',
+#     ylabel='Solar Offset (Rs)',
+#     add_vline=True,
+#     vline_x=0
+# )
+# ax3.set_title('Along quasi-radial baselines')
+# plt.tight_layout()
 
 ############################################################################################
 # Plotting inclined and quasi-latitudinal velocity distribution (hist2d: vel abs vs solar-offset)
@@ -222,30 +262,30 @@ fig4, (ax4_1, ax4_2) = plt.subplots(1, 2, figsize=(14, 6))
 plot_distrib_hist2d(
     fig=fig4,
     ax=ax4_1,
-    x=np.abs(vel_ic),
-    y=so_ic,
-    bins_x=30,
-    bins_y=15,
-    range_x=[0, 1500],
-    range_y=[0, 30],
-    xlabel='|$v_{proj}$| (km/s)',
-    ylabel='Solar Offset (Rs)'
+    x=scale_qt,
+    y=np.abs(vel_qt),
+    bins_x=15,
+    bins_y=30,
+    range_x=[0, 800],
+    range_y=[0, 1000],
+    xlabel='Scale (s)',
+    ylabel='|$v_{proj}$| (km/s)'
 )
-ax4_1.set_title('Along oblique baselines')
+ax4_1.set_title('velocity distribution with scale (quasi-latitudinal)')
 
 plot_distrib_hist2d(
     fig=fig4,
     ax=ax4_2,
-    x=np.abs(vel_qt),
-    y=so_qt,
+    x=so_qt,
+    y=np.abs(vel_qt),
     bins_x=15,
     bins_y=15,
-    range_x=[0, 1500],
-    range_y=[0, 30],
-    xlabel='|$v_{proj}$| (km/s)',
-    ylabel='Solar Offset (Rs)'
+    range_x=[0, 30],
+    range_y=[0, 1000],
+    xlabel='Solar Offset (Rs)',
+    ylabel='|$v_{proj}$| (km/s)'
 )
-ax4_2.set_title('Along quasi-latitudinal baselines')
+ax4_2.set_title('velocity distribution with solar-offset (quasi-latitudinal)')
 
 plt.tight_layout()
 
@@ -365,6 +405,7 @@ plt.tight_layout()
 ############################################################################################
 # Plotting quasi-radial velocity distribution (hist2d: scale/so vs vel)
 fig7, (ax7_1, ax7_2) = plt.subplots(1, 2, figsize=(14, 6))
+fontsize = 14
 
 plot_distrib_hist2d(
     fig=fig7,
@@ -376,16 +417,17 @@ plot_distrib_hist2d(
     range_x=[0, 800],
     range_y=[-1000, 1000],
     xlabel='Scale (s)',
-    ylabel='$v_{proj}$ (km/s)',
+    ylabel='$v_{proj}$ (km s$^{-1})$',
+    fontsize=fontsize, 
     add_hline=True,
     hline_y=0
 )
-plot_binned_stats(fig=fig7, ax=ax7_1, x=scale_qr, y=vel_qr, 
-                  bins_x=40, range_x=[0, 800],  
-                  color_pos='red', color_neg='orange',
-                  linewidth=1, capsize=5, 
-                  label_pos='outward', label_neg='inward')
-ax7_1.set_title('velocity distribution with scale')
+# plot_binned_stats(fig=fig7, ax=ax7_1, x=scale_qr, y=vel_qr, 
+#                   bins_x=40, range_x=[0, 800],  
+#                   color_pos='red', color_neg='orange',
+#                   linewidth=1, capsize=5, 
+#                   label_pos='outward', label_neg='inward')
+ax7_1.set_title('velocity distribution with scale', fontsize=fontsize)
 
 plot_distrib_hist2d(
     fig=fig7,
@@ -397,16 +439,17 @@ plot_distrib_hist2d(
     range_x=[0, 30],
     range_y=[-1000, 1000],
     xlabel='Solar Offset (Rs)',
-    ylabel='$v_{proj}$ (km/s)',
+    ylabel='$v_{proj}$ (km s$^{-1})$',
+    fontsize=fontsize, 
     add_hline=True,
     hline_y=0,
 )
-plot_binned_stats(fig=fig7, ax=ax7_2, x=so_qr, y=vel_qr, 
-                  bins_x=30, range_x=[0, 30],  
-                  color_pos='red', color_neg='orange',
-                  linewidth=1, capsize=5, 
-                  label_pos='outward', label_neg='inward')
-ax7_2.set_title('velocity distrbution with solar-offset')
+# plot_binned_stats(fig=fig7, ax=ax7_2, x=so_qr, y=vel_qr, 
+#                   bins_x=30, range_x=[0, 30],  
+#                   color_pos='red', color_neg='orange',
+#                   linewidth=1, capsize=5, 
+#                   label_pos='outward', label_neg='inward')
+ax7_2.set_title('velocity distrbution with solar-offset', fontsize=fontsize)
 
 plt.tight_layout()
 
