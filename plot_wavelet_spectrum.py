@@ -30,7 +30,7 @@ elif file_type == 3:
                  'Residual Frequency-2', 'Residual Phase-2']
     unit_list = ['Hz', 'rad', 'Hz', 'rad']
 elif file_type == 4:
-    file_dir = 'E:/Research/Data/Tianwen/m1a04x_renew/'
+    file_dir = 'E:/Research/Data/Tianwen-1/m1a04x_renew/'
     file_name = 'BdBdchan3_1frephase1s.dat'
     var_list = ['Residual Frequency', 'Residual Phase', 'Signal Density', 'Noise Density']
     unit_list = ['Hz', 'rad', 'dB', 'dB']
