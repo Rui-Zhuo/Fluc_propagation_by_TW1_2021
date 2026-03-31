@@ -2,7 +2,7 @@
 
 This repository contains the codes and results for the analysis of compressional waves propagation based on the radio sounding of Tianwen-1 and multiple ground-based radio telescopes. It is maintained by Rui Zhuo (ruizhuo@pku.edu.cn)
 
-the manuscript titled *Radio Sounding of Compressional Waves Propagation and Reflection in Solar Wind Acceleration Region* submitted to *Nature Astronomy* by Maoli Ma, Rui Zhuo, Ziqi Wu and Liangliang Yuan. The emails of corresponding authors are jshept@pku.edu.cn and mamaoli@shao.ac.cn.
+the manuscript titled *'Radio Sounding of Compressional Waves Propagation and Reflection in Solar Wind Acceleration Region'* submitted to *Nature Astronomy* by Maoli Ma, Rui Zhuo, Ziqi Wu and Liangliang Yuan. The emails of corresponding authors are jshept@pku.edu.cn and mamaoli@shao.ac.cn.
 
 - *analyse_wavelet_coherence.py*: given the radio signals from two stations, calculate the coherency spectrum and time-lag spectrum between them, and obtain the propagation speed along the baseline finnally.
 
