@@ -1,0 +1,775 @@
+PAGE 1
+Draft version October 8, 2026
+Typeset using LATEXdefaultstyle in AASTeX7.0.1
+Spatially Inferred Signatures of Compressive Wave Reflection in the Solar Wind Acceleration Region1
+Maoli Ma,1, 2,∗ Rui Zhuo,3, 4,∗ Liangliang Yuan,1,∗ Ziqi Wu,3, 4,∗ Jiansen He,3 Peijia Li,1 G. Molera Calv´es,52
+Ming Xiong,6 Jing Kong,7 Wenma Jin,7 Qinghui Liu,1 Yubo Hou,8 Zhong Chen,1 Bo Xia,1 De Wu,93
+Zhanghu Chu,1 Jasper Edwards,5 Giuseppe Cim`o,10 Jonathan Quick,11 Mikhail Kharinov,12 Andrey Mikhailov,124
+Hua Zhang,13 Longfei Hao,14 Javier J. Gonz`olez,15 Marco Morsiani,16 and Alexander Neidhardt 175
+1Shanghai Astronomical Observatory, Chinese Academy of Sciences, Shanghai 200030, China6
+2Key Laboratory of Radio Astronomy, Chinese Academy of Sciences, Nanjing 210033, China7
+3School of Earth and Space Sciences, Peking University, Beijing 100871, China8
+4Centre for Mathematical Plasma Astrophysics, KU Leuven, Leuven 3001, Belgium9
+5University of Tasmania, Hobart, TAS 7001, Australia10
+6National Space Science Center, Chinese Academy of Sciences, Beijing 100190, China11
+7Beijing Aerospace Control Center, Beijing, China12
+8Department of Astronomy, China West Normal University, Nanchong, 637009, China13
+9National Time Service Center, Chinese Academy of Sciences, Xi’an 710600, China14
+10Joint Institute for VLBI ERIC, Oude Hoogeveensedijk 4, 7991 PD Dwingeloo, The Netherlands15
+11Hartebeesthoek Radio Astronomy Observatory, PO Box 443, Krugersdorp, South Africa16
+12Institute of Applied Astronomy, Russian Academy of Sciences, Kutuzova Embankment 10, St. Petersburg 191187, Russia17
+13Xinjiang Astronomical Observatory, Chinese Academy of Sciences, Urumqi 830011, China18
+14Yunnan Astronomical Observatory, Chinese Academy of Sciences, Kunming 650011, China19
+15Centro de Desarrollos Tecnologicos, Observatorio de Yebes, Guadalajara, Spain20
+16Istituto di Radioastronomia, National Institute for Astrophysics (INAF), Bologna, Italy21
+17Geodetic Observatory Wettzell, Germany22
+ABSTRACT
+Wave reflection is a fundamental process in turbulence theories of the solar wind but has lacked23
+direct observational evidence in the solar wind acceleration region. Using coordinated multi-station24
+radio sounding of the Tianwen-1 spacecraft, we identify inward-propagating compressive disturbances25
+coexisting with outward-propagating fluctuations at 5.7 and 12.3R ⊙. The outward and inward26
+components approximately satisfy the kinematic relation expected for wave reflection, while magneto-27
+hydrodynamic simulations reproduce the observed propagation reversal and localized phase structures28
+associated with wave compression and rarefaction through reflection by density inhomogeneities.29
+Together, these independent signatures constitute the first remote-sensing evidence for compressive-30
+wave reflection in the solar wind acceleration region, provide new constraints on wave–turbulence31
+interactions relevant to solar wind acceleration.32
+33
+1.INTRODUCTION34
+The solar wind acceleration region, extending from a few to several tens of solar radii, is the key interface where35
+mass, momentum, and energy are transferred from the solar corona into the heliosphere (P. E.N. 1958; S. R. Cranmer36
+& A. R. Winebarger 2019). Despite decades of theoretical and observational efforts, how the solar wind continues to37
+gain energy and accelerate through the outer corona remains one of the central unresolved problems in heliophysics38
+(S. R. Cranmer & A. R. Winebarger 2019; N. M. Viall & J. E. Borovsky 2020).39
+40
+Wave–turbulence driven models have emerged as one of the leading theoretical frameworks (S. R. Cranmer & A. R.41
+Winebarger 2019; J. C. Perez et al. 2021). In this scenario, the gradients in density and Alfv´ en speed generate partial42
+Corresponding author:
+jshept@pku.edu.cn;llyuan@shao.ac.cn;mamaoli@shao.ac.cn
+∗ These authors contributed equally to this work.
+PAGE 2
+2
+wave reflection, producing counter-propagating Els¨ asser fluctuations that parallel (z +) and antiparallel (z −) to the43
+background magnetic field, respectively (M. Krogulec et al. 1994; A. Kumar et al. 2025; R. Meyrand et al. 2025). Their44
+nonlinear interaction drives the turbulent cascade that transfers energy from large scales to smaller scales. Parametric45
+decay instability (PDI) is another promising mechanism linking Alfv´ en-wave dynamics to the generation of compressive46
+fluctuations in the near-sun solar wind, where the pump wave (z +) transfers energy to daughter waves (includingz −47
+and compressive mode) (C. A. Gonz´ alez et al. 2023). The instability manifests as energy exchange between Alf´ een48
+waves and magnetosonic waves, thereby amplifying turbulence cascades and facilitating effective energy transport.49
+50
+Direct measurements by Parker Solar Probe (PSP) have provided the first in situ characterization of the inward51
+Els¨ asser component (z−) in the near-Sun solar wind (C. H. K. Chen et al. 2020; C. C. Chaston et al. 2020). Although52
+the turbulence is strongly dominated by outward fluctuations (z+), a finitez − component is consistently observed. The53
+Els¨ asser energies ofz− have a much shallower radial variation (|δz −|2 ∝r −0.51±0.11) than the outward-propagating54
+ones (|δz +|2 ∝r −1.72±0.12) between 0.17 (35R ⊙)∼1 AU. The radial variation of the inward component is consistent55
+with its generation by reflection from the gradient in Alfv´ en speed (C. H. K. Chen et al. 2020; B. D. G. Chandran &56
+J. C. Perez 2019). While alternative mechanisms, including PDI and local nonlinear process, have also been proposed57
+(C. H. K. Chen et al. 2020; L. Yang et al. 2023). Recent theoretical work suggests that part of the observedz − popula-58
+tion may represent anomalous fluctuations that co-propagate with the dominantz + component rather than genuinely59
+sunward-propagating Alfv´ en waves (L. Yang et al. 2023). Because PSP provides only single-point measurements,60
+distinguishing propagation from temporal evolution remains challenging (W. H. Matthaeus et al. 2019), highlighting61
+the need for spatially separated multi-point sampling to separate spatial from temporal variations.62
+63
+Previous observations have established MHD wave reflection throughout the low solar atmosphere, including fast-64
+mode waves at coronal-hole boundaries observed in EUV(X. Zhou et al. 2022), slow magnetoacoustic waves in coronal65
+loops (S. Mandal et al. 2016), and, more recently, Alfv´ en waves in the chromosphere (M. Murabito et al. 2024). How-66
+ever, whether such reflection can be directly observed in the solar wind acceleration region remains largely unknown,67
+because the tenuous plasma produces only weak emission, making reflected wave fronts difficult to image.68
+69
+Multi-station radio sounding provides a simultaneous sampling at multiple locations, substantially reducing the70
+ambiguity between spatial structure and temporal evolution. Radio signals transmitted by deep-space spacecraft71
+undergo phase and frequency fluctuations as they traverse electron-density irregularities (D. Wexler et al. 2020), which72
+are generally interpreted as signatures of compressive plasma disturbances (S. Chiba et al. 2025). Based on Taylor’s73
+frozen-in approximation (G. I. Taylor 1938), multi-station cross-correlation techniques have been developed to study74
+the propagation speed of these density irregularities ( N.A.Armand et al. 2003; O. I. Yakovlev et al. 1989). More75
+recently, geographically distributed multi VLBI stations have extended this approach to resolve the propagation of76
+solar wind streams, streamer waves, and CMEs (M. Ma et al. 2022; Z. Wang et al. 2023).77
+78
+This paper report the wave reflection signatures during the solar wind acceleration region detected by the Multi-79
+station radio sounding. Section 2 introduces the observation, compressive-fluctuation propagation measurements and80
+MHD modeling of wave reflection. Section 3 identify the wave-reflection signatures from measured propagation, phase81
+fluctuations, and theoretical modeling. Section 4 is the discusses and concludes.82
+83
+2.DATA AND METHODS84
+2.1.Multi-station Observing Campaign Design and Execution for Solar Conjunction85
+Focusing on the 2021 September-October solar conjunction, we specifically designed, coordinated, and executed an86
+intensive multi-station radio-sounding campaign, conducting 18 dedicated observations of the Tianwen-1 spacecraft.87
+The campaign leveraged antennas from the European VLBI Network (W. Schl¨ uter & D. Behrend 2007), Russian88
+VLBI Network (N. Shuygina et al. 2019), Chinese VLBI Network (Q. H. Liu et al. 2022), University of Tasmania89
+(G. M. Calv´ es et al. 2021; J. Edwards et al. 2025), and Chinese Kashi and Jiamusi deep-space stations (R. Zhang90
+et al. 2022)(Fig. 1a, Table 1 in Appendix A).91
+92
+PAGE 3
+3
+These purpose-driven multi-station observations cover heliocentric distances from 2.8 to 28.6R ⊙, heliographic lati-93
+tude from 0.1 ◦ to 67.6◦, with seven sessions sampling within 10R ⊙, a key region for solar-wind acceleration, heating,94
+and the evolution of plasma fluctuations (S. R. Cranmer & A. R. Winebarger 2019).95
+96
+For each observing station, the piercing-point (the closest approach point of the spacecraft radio ray to the Sun)97
+(M. Xiong et al. 2023) was determined and transformed into the Carrington coordinate system (W. T. Barnes et al.98
+2020). The projected baseline is defined as the line connecting piercing-points (Fig. 1b). Since the piercing points99
+are located far from the Sun, their radial directions are approximately parallel (Fig. 1c). Based on the orientation of100
+the projected baseline, the baselines are classified into three categories: quasi-radial, for which the angle ∆θbetween101
+the baseline and the radial direction is less than 30 ◦; oblique, 30 ◦∼60◦; and transverse, 60 ◦∼90◦. In Fig. 1b, when102
+the piercing-point located at 5.7R ⊙ off the center of sun on 4 October 2021, four radio telescopes took part in the103
+observation. The Js-Bd and Yg-Hh pairs form two adjacent quasi-radial baselines with mean radial separations of104
+∼853 km and∼4600 km, respectively. Their difference in transverse distance is around 4000 km. Js–Hh and Bd–Hh105
+are oblique baselines (38.2 ◦,46.8 ◦ respectively ), while Bd–Yg is transverse baselines (∆θ∼81.7 ◦). These projected106
+baselines, spanning different orientations and spatial separations on the order of thousands km, allow the spatial107
+evolution and scale-dependent coherence of compressive fluctuations to be examined.108
+109
+2.2.Multi-point Characterization of Compressive Fluctuation Propagation110
+Solar-wind density fluctuations exhibit structures over a broad range of spatial and temporal scales, reflecting the111
+intrinsically multi-scale nature of solar-wind turbulence (D. Verscharen et al. 2019). The space–time correlation analy-112
+sis used in multi-point measurement of the fluctuations, is able to study the bulk-flow speed, and the coupling between113
+the spatial structure and temporal evolution (M. Xiong et al. 2023). The linear-wave propagation model including114
+random sweeping effects is proposed to describe the space–time correlationR(r, τ) in compressible turbulence (D. Li115
+et al. 2013).R(r, τ) can reflect not only convection by the mean flow but also intrinsic wave propagation, and random116
+sweeping leads to the decorrelation of fluctuations.117
+118
+Here, we characterize the propagation of the observed frequency fluctuations using three complementary approaches:119
+individual spike tracking (M. Ma et al. 2022; Z. Wang et al. 2023), conventional cross-correlation (CCF) ( N.A.Armand120
+et al. 2003; M. Ma et al. 2022; Z. Wang et al. 2023), and wavelet coherence analysis (C. Torrence & G. P. Compo121
+1998). Individual spikes provide a direct measure of the propagation delay of localized structures between spatially122
+separated sampling points. The CCF obtain the function of time lag, combining information from different fluctuation123
+scales, whereas wavelet-based correlation resolves the scale-dependent correlations in both time and scale. Coherent124
+disturbances were identified using regions with high coherence (wavelet cross-correlation coefficient≥0.8). The125
+projected propagation speed was calculated from the measured time delay and the projected baseline separation.126
+127
+2.3.MHD Simulation of wave reflection128
+We interpret and reproduce the counter-propagating signatures in the observed density fluctuations within a wave-129
+reflection scenario. Wave reflection can occur in the presence of gradients in the background density and magnetic130
+field. We use a MHD simulation in a one-dimensional magnetic flux tube. Specifically, in the background flow, a131
+sinusoidal velocity perturbation is imposed at the upstream boundary and propagate through a localized density132
+enhancement representing an inhomogeneous coronal structure. The plasma parameters and magnetic-field strength133
+are constrained by the MHD wave-speed inferred from the multi-station measurements. The governing equations and134
+key model parameters are described in Appendix B, the simulation data can be found in L. Yuan (2026).135
+136
+3.RESULT137
+To robustly identify inward-propagating compressive fluctuations and infer their origin as localized wave reflection in138
+the outer corona, we employ a multi-stage diagnostic pipeline combining time–frequency decomposition, multi-baseline139
+kinematic reconstruction, and MHD simulations.140
+141
+PAGE 4
+4
+YS 
+ZC 
+HH 
+KS 
+HH 
+BD 
+YG 
+JS 
+b c
+BD 
+2021-10-18 08:00UT 2021-10-04 07:20UT
+Baseline
+Line to Earth 
+Line to Sun 
+Figure 1.Geometry of the Tianwen-1 solar conjunction observations. (a) Apparent trajectory of Tianwen-1 during the 2021
+solar conjunction projected onto a SOHO/LASCO C3 coronagraph image. White dots indicate the piercing-point at selected
+observing epochs. (b) Close-up view of the radio-ray projection geometry for different VLBI stations (JS, BD, YG, and HH) on
+Oct.4, 2021. (c) Close-up view of the radio-ray projection geometry for different VLBI stations (BD, KS, ZC, YS, and HH) on
+Oct.18, 2021. The dots indicate the piercing-point of each station on the sky plane. Colored solid lines indicate the directions
+toward the Sun, while dashed lines show the corresponding projection directions toward Earth. The projection baseline is
+defined as the line connecting the piercing-points.
+3.1.Multi-baseline and multi-method validation of inward-propagating compressive disturbances142
+A particularly clear case of coexisting inward- and outward-propagating compressive fluctuations was observed at143
+5.7R ⊙ on 4 October 2021 (Fig. 1b). The observations at Bd, Yg, and Hh span 05:46–08:16 UTC, while those at Js144
+cover 07:13–08:16 UTC (Fig. 2a).145
+146
+The frequency fluctuations in Fig. 2 are sampled at 1 s intervals. The short quasi-radial Js–Bd baseline provides the147
+clear signature of coexisting inward- and outward-propagating compressive fluctuations. Between 08:03 and 08:15 UT,148
+the spikes between UTC 08:13-08:14 on Js-Bd show an inward-propagating fluctuations with speed of∼ −90 km s −1149
+(Fig. 2b), accompanied by an outward spike with∼205 km s −1 at 08:08.150
+151
+Wavelet cross-correlation analysis further resolves inward- and outward-propagating wave packets in both time and152
+scale. The spikes at 08:13∼08:14 UT correspond to the No.3 wave packet with dominant periods of 32∼80 s and an153
+average lag of−7.7±1.0 s. The remaining three wave packets exhibit average lags of−5.8±1.6 (No.1, period 150∼400154
+s, UTC 07:30∼07:45),−9.2±2.0 (No.2, period 100∼250 s, UTC 07:55∼08:00), and 2.7±1.5 s (No.4, period 100∼250155
+PAGE 5
+5
+05:45 06:00 06:15 06:30 06:45 07:00 07:15 07:30 07:45 08:00 08:15
+Time [HH:MM]
+-2
+0
+2
+4
+Frequency [Hz]
+a Bd
+Hh+0.5 Hz
+Yg-1 Hz
+Js+2 Hz
+  32
+  64
+ 128
+ 256
+ 512
+1024 Period [second]
+Js-Bd
+WCOHLag [s]
+f
+0
+0.5
+1
+07:15 07:30 7:45 08:00 08:15
+Time [HH:MM]
+  32
+  64
+ 128
+ 256
+ 512
+1024 Period [second]
+1
+2
+3
+4
+g
+-10
+-5
+0
+5
+10
+Figure 2.Multi-baseline and multi-method validation of inward-propagating compressive disturbances on 2021 October 4. (a)
+Frequency fluctuations (FFs) measured at the Bd, Hh, Yg, and Js stations during the solar conjunction. (b) FFs on the short
+quasi-radial Js–Bd baseline, showing coexisting outward (∼205 km s −1) and inward (∼-90 km s −1) propagating disturbances
+between 08:03 and 08:15 UT. (c) FFs on the adjacent long quasi-radial Yg–Hh baseline, showing outward propagation (∼383
+km s −1) over the same interval. (d,e) Classical cross-correlation functions for the Js–Bd and Yg–Hh baselines. (f,g) Wavelet
+coherence and lag spectra for the Js–Bd baseline. Purple contours denote WCOH≥0.8, and black dashed contours outline
+coherent wave packets.
+s, UTC 08:02∼08:10), respectively (Fig. 2g). The lag constrains the propagation direction and speed, while the period156
+PAGE 6
+6
+represents the fluctuation scale. Their time-dependent distribution reveals multiscale, intermittent, and bidirectional157
+compressive fluctuations.158
+159
+The conventional cross-correlation analysis also reveals the coexistence and intermittency of inward- and outward-160
+propagating fluctuations. During UTC 07:09–07:30, 07:30–07:50, and 07:50–08:16, the cross-correlation functions161
+consistently exhibit a double-peaked structure, with lags of -9/-1 s, -5/2 s, and -8/-1 s, respectively (example in162
+Fig. 2d). The lags in the conventional CCF reflect the combined effect of fluctuations over multiple temporal scales163
+within the analysis interval. The variations in the lags arise from the intermittent and time-varying small-scale wave164
+packets identified by the wavelet analysis.165
+166
+The inward-propagating component is independently detected on both oblique baselines, Js–Hh and Bd–Hh (Fig.167
+3a,b). Since the Bd–Hh observations started earlier than those at Js, the onset of the inward-propagating component168
+is∼06:30 UT (see the arrow in Fig. 3b) found from Bd-Hh, after which it persisted until the end of the observations.169
+Owing to the long and oblique projected separations of these two baselines, significant coherence (WCOH≥0.8) is170
+confined primarily to periods longer than∼500 s. In contrast, the short quasi-radial Js–Bd baseline exhibits signifi-171
+cant coherence over a much broader range of periods, extending down to∼32 s (Fig.2g). This contrast suggests that172
+small-scale fluctuations decorrelate more rapidly due to turbulent evolution (Q. He et al. 2017), whereas larger-scale173
+fluctuations remain coherent over longer and more oblique baselines. These results instead demonstrate the scale and174
+direction dependent spatial coherence of the fluctuations. The detection of inward propagation on three baselines at175
+different scales and times indicates a multiscale and spatially intermittent inward-propagating component.176
+177
+Figure 3.Wavelet cross-correlation lags for different baselines on Oct.4, 2021. (a) Obqique baseline Js-Hh (b) Bd-Hh, the
+arrow marks the transition from outward to inward propagation at∼06:30 UCT. (c) Quasi-radial baseline Yg-Hh.
+In contrast, the neighboring quasi-radial Yg–Hh baseline, offset transversely by∼4000 km from Js-Bd (Fig. 1b), is178
+dominated by outward propagation. Spike structures between 08:07∼08:09 UT indicate a speed of∼383 km s −1 with179
+PAGE 7
+7
+a characteristic period of∼60 s (Fig.2c) , while classical cross-correlation identifies fast (∼380 km s −1) and slow180
+(∼143 km s −1) components (Fig.2e) . No small scale inward-propagating disturbances are detected by the wavelet181
+analysis (Fig. 3c).182
+183
+3.2.Kinematic and numerical signatures of wave reflection184
+Multi-baseline radio sounding of inward-propagating compressive disturbances reveals that near-Sun density fluctu-185
+ations are not merely frozen-in structures convected by the solar wind, but also contain compressive waves propagating186
+relative to the background medium (S. A. Jacques 1977; R. L. Dewar 1970). The long Yg–Hh baseline clearly re-187
+solves two outward-propagating components, with no apparent contribution from the inward-propagating disturbance.188
+We therefore identify the slow component,v bg = 143 km s −1, as the background flow and the fast component,189
+vf = 370 km s−1, as a wave propagating outward through this flow. In the inertial frame, the latter can be expressed190
+asv f =v bg +v w, wherev w is the wave propagation speed in the plasma rest frame, yieldingv w = 237 km s −1. If191
+the inward-propagating component is the reflected counterpart of this outward-propagating wave, its propagation192
+direction reverses in the plasma rest frame, such that +vw becomes−v w. Transforming back to the inertial frame then193
+givesv in =v bg −v w = 143−237 =−94 km s −1.The negative sign indicates sunward propagation in the inertial frame.194
+Remarkably, this predicted velocity agrees closely with the observed inward velocity of∼ −90 km s −1, providing195
+quantitative support for the interpretation of the inward component as a reflected compressive wave.196
+197
+To further investigate the origin of the inward-propagating component, we perform one-dimensional MHD simula-198
+tions of wave reflection by a localized density enhancement. Two virtual stations are placed along the radial direction199
+with a separation of 4000 km, corresponding to the projected length of the Bd–Hh baseline. The observed wave speed200
+(vw = 237 km s −1) and background-flow speed (v bg = 143 km s −1) are adopted in the simulation. The simulation201
+reproduces three key features consistent with the observations.202
+203
+First, the simulated fast outward and inward components propagate at approximately 380 and−94 km s −1, respec-204
+tively, consistent with the observed velocities and the kinematic relation expected for wave reflection (Fig. 5).205
+206
+Second, around the transition from outward to inward propagation (06:30 UTC), the simulated phase fluctuations207
+generated from wave compressive and rarefaction exhibit features similar to those observed (shown by dashed box in208
+Fig. 4c). The simulations further demonstrate that these phase signatures can arise from nonlinear wave steepening209
+triggered by interface reflections. The resulting steepened velocity profiles subsequently generate corresponding density210
+variations through the continuity equation. Fourier analysis of the observed phase fluctuations reveals higher-order211
+harmonics, with three dominant frequencies at 0.44, 0.66, and 1.11 mHz (Fig. 4e). Their nearly integer frequency212
+ratios are consistent with harmonic generation during the nonlinear evolution of propagating magnetosonic waves.213
+The simulated phase fluctuations likewise exhibit harmonics up to the fifth order, with the fourth and fifth harmonics214
+dominating at 0.60 and 0.75 mHz, respectively. Although the dominant harmonic orders differ, the presence of215
+higher-order harmonics in both cases suggests that the wave interactions and nonlinear evolution contribute to the216
+observed phase structures.217
+218
+Since the second-, third-, and fifth-order harmonic components dominate the phase-fluctuation spectrum, we approx-219
+imate the observed phase fluctuation, ∆ρ(x, t), using a three-mode representation that retains these three dominant220
+harmonics while neglecting the remaining components.221
+∆ρ(x, t) =A 1 cos [2(kx−ωt)] +A 2 cos [3(kx+ωt) +ϕ 2] +A 3 cos [5(kx+ωt) +ϕ 3] +. . .(1)222
+whereA n andϕ n denote the amplitude and phase shift of then-th harmonic, respectively. Note that a mode propa-223
+gating in the positive x-direction has a minus sign in front ofωt, and vice versa. Depending on their relative phases,224
+the higher-order harmonics interfere either constructively or destructively, resulting in localized density compression225
+or expansion (Fig. 4c and Fig. 5). Whether the wave in the compression or rarefaction is determined by the inter-226
+ference pattern, rather than by its direction of propagation. Although finite-amplitude outward-propagating waves227
+can also undergo nonlinear steepening, the coexistence of counter-propagating signatures and wave steepening in both228
+observation and simulation suggests that wave reflection likely contributes to the observed behavior.229
+230
+PAGE 8
+8
+Third, the observed propagation transitions from predominantly outward to inward near the wave-compression re-231
+gion (Fig. 4b and 4d). The simulation reproduces this reversal in propagation direction. The observations reveal232
+multiscale inward-propagating fluctuations with scale-dependent coherence across different baselines. Although the233
+simplified MHD simulation adopts a single incident-wave period of 25 min and cannot reproduce the observed multi-234
+scale variability and decorrelation, it demonstrates that partial reflection by a localized density enhancement generates235
+inward-propagating disturbances, while the associated wave interactions and nonlinear evolution produce phase struc-236
+tures resembling those observed.237
+Third, the observed propagation transitions from predominantly outward to inward near the wave-compression238
+region (Fig. 4b), a reversal reproduced by the simulation (Fig. 4d). Notably, the simplified MHD model considers239
+one-dimensional radial wave propagation with a single incident-wave period of 25 min and therefore cannot fully240
+capture the observed multiscale variability or decorrelation across transverse spatial separations. Instead, it aims to241
+reproduce the bidirectional wave propagation arising from partial reflection and the associated phase structures that242
+qualitatively resemble those observed.243
+244
+Together, the agreement between the observations and simulations provides a coherent picture in which compressive245
+disturbances encounter localized density structures and undergo reflection, giving rise to the observed inward-246
+propagating fluctuations.247
+248
+3.3.Recurrence of reflection-like events249
+Another similar event was observed on 18 October 2021 at a heliocentric distance of 12.33R ⊙, where the ray250
+path crossed a streamer. Three independent baselines (Zc–Ks, Zc–Bd, and Ys–Zc) consistently detected coexisting251
+outward- and inward-propagating disturbances (Fig. 6a–c). Wavelet cross-correlation reveals a coherent outward-252
+propagating wave packet during 07:48–08:10 UT (250∼400 s), followed by an inward-propagating wave packet during253
+08:12–08:36 UT. The coexistence of outward- and inward-propagating components is also evident in the conventional254
+cross-correlation analysis. All three baselines show a primary peak around 7 s, corresponding to the fast outward-255
+propagating component, while the Zc–Ks and Ys–Zc baselines additionally exhibit secondary peaks at 20∼26 s and256
+-12∼-8 s, corresponding to the slow outward- and inward-propagating components, respectively (Fig. 6d).257
+258
+The cross-correlation strength depends strongly on the orientation of the projected baseline. The Zc–Ks baseline,259
+with the best radial alignment, exhibits the strongest correlation, consistent with the expected predominantly radial260
+propagation of the fluctuations. From the Zc–Ks baseline, the fast outward- and inward-propagating speeds are esti-261
+mated to be 241 km s −1 and−150 km s −1, respectively, while the Ys–Zc baseline yields a slow outward-propagating262
+speed of 64 km s −1.263
+264
+Interpreting the slow outward component as the background solar wind gives a wave speedv w of approximately265
+177 km s −1 in the plasma rest frame. The corresponding inward-propagating speed,v in =v bg −v w, is−113 km s −1 in266
+the inertial frame, differing from the observed value of−150 km s −1 by only∼40 km s −1. The larger velocity-closure267
+uncertainty on Oct. 18 mainly arises from the coexistence of bidirectional propagation components. As cross-268
+correlation represents a statistical average over the analysis interval, disturbances propagating in different directions269
+introduce additional uncertainty into the derived velocities. Nevertheless, the observed velocities remain approximately270
+consistent with the kinematic relation expected for wave reflection, supporting a reflection interpretation of the inward271
+component.272
+273
+Extending the wavelet-coherence analysis to all 18 observing sessions reveals coexisting inward- and outward-274
+propagating fluctuations in eight cases spanning different heliocentric distances (Appendix A, Table 1), indicating that275
+inward propagation is not confined to an isolated event. The cases on Oct.4 and Oct.18 in 2021 exhibit sufficiently well-276
+separated cross-correlation peaks to independently resolve the fast outward, slow outward, and inward-propagating277
+components, allowing a quantitative velocity-closure test of the wave-reflection scenario.278
+279
+PAGE 9
+9
+  64
+ 128
+ 256
+ 512
+1024 Period [s] 
+Bd-Hh 
+a
+0
+0.5
+1
+06:00 6:30 07:00 
+  64
+ 128
+ 256
+ 512
+1024 Period [s] 
+Lag [s] WCOH 
+b
+-40 
+-20 
+0
+20 
+40 
+06:00 06:30 07:00 
+-200
+0
+200
+Phase [rad] Compression 
+Expansion 
+Lag [s]
+c Bd 
+Hh 
+Bd simu
+Hh simu
+06:00 06:30 07:00 
+  32
+  64
+ 128
+ 256
+ 512
+1024 Period [second] 
+d
+-40 
+-20 
+0
+20 
+40 
+1.11 0.44 0.66
+e
+Figure 4.Observed and simulated signatures of compressive-wave reflection in the solar wind acceleration region. (a,b)
+The observed wavelet coherence and lag spectra on the Bd–Hh baseline reveal a localized transition from outward to inward
+propagation near 06:30 UT (indicated by the arrow); Purple contours indicate regions with WCOH≥0.8. (c) The measured and
+MHD simulations phase for Bd and Hh. The patterns generated from wave compression and expansion are consistent with the
+observed phase. (d) The simulation lag spectra on the Bd–Hh baseline. (e) Fourier spectra of the observed phase fluctuations
+in panel c.
+PAGE 10
+10
+inward
+outward
+Interface
+Trajectory 
+-94 km·s -1 
+380 km·s -1 
+Compression
+Expansion
+Bd Hh 
+4000km
+143 km·s -1 
+Figure 5.X-T diagram in the MHD simulation of magnetosonic wave reflection and interference. The black solid lines indicate
+the propagation trajectories of the outward (∼380 km s −1) and inward (∼ −94 km s −1) wave components. The nonlinear
+interactions among incident and reflected waves produces localized compression and expansion regions. The green dashed line
+marks the approximate trajectory of the plasma density interface responsible for partial wave reflection. The vertical yellow
+and purple lines indicate the projection points of Bd and Hh stations are separated by 4000 km.
+4.DISCUSSION AND CONCLUSION280
+4.1.Applicability of the Taylor frozen-in hypothesis281
+The propagation velocities derived in this study rely on the Taylor frozen-in hypothesis (G. I. Taylor 1938; G. He282
+et al. 2017), which relates temporal lags between spatially separated measurements to propagation velocities through283
+v= ∆r/τ. Multi-point analysis reveals multiscale, intermittent, and anisotropic compressive fluctuations with both284
+outward- and inward-propagating components. Nevertheless, the preservation of nearly identical spike-like pertur-285
+bations between separated stations and the high wavelet coherence (WCOH≥0.8) (Fig. 2b,c,f,g) indicate sufficient286
+spatial coherence to support the Taylor frozen-in approximation at specific scales. Conventional cross-correlation287
+provides a statistical average across scales within the analysis interval. The combined use of multiple correlation288
+methods across multiple independent baselines further supports the robustness of the derived propagation velocities.289
+290
+4.2.Wave reflection291
+The observations support localized wave reflection as a plausible origin of the inward-propagating component. The292
+observed outward and inward velocities approximately satisfy the kinematic relation expected for an incident–reflected293
+wave pair. One-dimensional MHD simulations further reproduce the observed propagation reversal and phase struc-294
+PAGE 11
+11
+-100 -80 -60 -40 -20 0 20 40 60 80 100
+Time lag [sec]
+0
+0.2
+0.4
+0.6
+0.8Freq correlation function
+7 s,241 15.6 km s-1
+-11 s,-150 21.4 km s-1
+24 s,64 8 km s-1
+d Zc-Ks,  r=1687 7 km  s=689   32 km
+Zc-Bd,  r=1898 82 km  s=1380 84 km
+Ys-Zc,  r=1541 85 km  s=1300 24 km
+Figure 6.Wavelet cross-correlation (WTC) lag maps and classical cross-correlation functions for the Zc–Ks, Zc–Bd, and Ys–Zc
+baselines. (a–c) Wavelet lag spectra, where warm (cool) colors denote positive (negative) lags corresponding to outward (inward)
+propagation. Purple contours indicate regions with WCOH≥0.8, and black dashed contours outline coherent wave packets.
+(d) Classical cross-correlation functions for the three baselines.
+PAGE 12
+12
+tures through reflection of a compressive wave by a localized density enhancement (Fig. 4b–d).295
+296
+Other mechanisms, including Alfv´ en-wave reflection and parametric decay instability (PDI), may also generate297
+counter-propagating fluctuations (T. A. Bowen et al. 2018; C. H. K. Chen et al. 2020). However, radio sounding pri-298
+marily measures electron-density fluctuations and does not directly constrain magnetic-field perturbations or Alfv´ enic299
+components. Moreover, the observed inward-propagating compressive disturbances are defined in the heliocentric300
+frame, whereas the Els¨ asserz− component is defined in the plasma frame relative to the background magnetic field.301
+Although finite-amplitude Alfv´ en waves can produce compressive density fluctuations through the ponderomotive force302
+(M. Murabito et al. 2024). Whether ponderomotive-driven compressive fluctuations satisfy the kinematic relation303
+expected for an incident–reflected wave pair has not been observationally demonstrated.304
+305
+The detection of inward-propagating compressive fluctuations over a wide range of heliocentric distances suggests306
+that wave reflection is a recurrent feature of the solar wind acceleration region. These counter-propagating fluctuations307
+provide a potential channel for nonlinear wave interaction, energy redistribution, and enhanced turbulent dissipation308
+(A. Kumar et al. 2025). Future radio-sounding observations combining deep-space spacecraft with globally distributed309
+radio arrays (P. Cappuccio et al. 2024; R. Zhang et al. 2026) will enable direct measurements of wave anisotropy,310
+reflection efficiency, providing new constraints on the role of wave reflection in solar wind turbulence.311
+312
+4.3.Conclusion313
+The coordinated multi-station radio sounding observation reveals multi-scale, intermittent, and bidirectional com-314
+pressive fluctuations in the solar wind acceleration region. The inward-propagating components, together with their315
+kinematic and phase characteristics, provide the first remote-sensing evidence for compressive-wave reflection in this316
+region. These results demonstrate the potential of multi-station radio sounding for resolving the spatial evolution and317
+propagation of compressive fluctuations in the inner solar wind.318
+319
+5.CODE AND DATA AVAILABILITY320
+The cross correlation code and related data used for lag analysis could be found on https://doi.org/10.5281/zenodo.321
+21369407. The MHD simulation data could be found on https://doi.org/10.5281/zenodo.19362826.322
+323
+ACKNOWLEDGMENTS324
+We thank Profs. Dali Kong and Jinhan Xie for insightful discussions on MHD wave–plasma interactions and turbu-325
+lence theory. We also acknowledge observational support from Profs. Weimin Zheng and Fengchun Shu, spacecraft326
+dynamic modeling support from Prof. Yong Huang, and Mark5B/VDIF data decoding assistance from Xu Zhao, Lei327
+Liu, and Prof. Juan Zhang. We are grateful to the radio observatories in China, Africa, Russia, Europe, and Australia328
+for their observation support. This work was supported by the National Natural Science Foundation of China (Grants329
+No. 42241118, 12273098, and 42504171), the Key Incubation Project of Shanghai Astronomical Observatory, and330
+the 100101 Key Laboratory of Radio Astronomy and Technology, Chinese Academy of Sciences. L.Y. acknowledges331
+additional support from the CAS Pioneer Hundred Talents Program and the CAS Project for Young Scientists in332
+Basic Research (YSBR-136).333
+334
+AUTHOR CONTRIBUTIONS335
+M. Ma designed the observational campaign, data processing and velocity analysis. Rui Zhuo conducted the336
+wavelet-coherence analysis. Liangliang Yuan designed and conducted the MHD simulation. Ziqi Wu performed337
+the propagation-velocity analysis. Jiansen He supervised the project, contributed to the scientific interpretation, and338
+revised the manuscript. Peijia Li and Jing Kong provided the light-time model and orbit solutions. Ming Xiong339
+contributed discussions on data interpretation and physical implications. G. Molera Calv´ es and Jasper Edwards340
+provided Yg station data and comments. Wenma Jin coordinated Tianwen-1 operations and observations at the341
+PAGE 13
+13
+Chinese deep-space stations. All authors contributed to observations, mission operations, and manuscript revision.342
+343
+APPENDIX344
+A.OBSERVATION LOG AND OCCURRENCE STATISTICS OF INWARD-PROPAGATING DISTURBANCES345
+The observation log and occurrence statistics of inward-propagating fluctuations in 2021 is displayed in Table 1.346
+Fig. 7 are the wavelet cross-correlation on the frequency fluctuations to show the co-exist of inward and outward347
+propagation fluctuations. The statistical analysis of coexisting inward- and outward-propagating disturbances was348
+restricted to quasi-radial baselines, where the angle between the baseline orientation and the local radial direction is349
+smaller than 30 o.350
+351
+T able 1.Observation Log and Occurrence Statistics of Inward-Propagating Fluctuations in 2021.
+Date Time a Distance [R⊙]b Latitude [◦]b Longitude [◦]b Stations Inwards? c
+Sep. 15 02:00-04:00 28.6 7.9 37.7 SH, UR Yes
+Sep. 16 12:00-14:00 27.4 8.2 26.9 Ht, Ys /
+Sep. 23 05:15-08:15 18.9 11.2 289.4 Km, Ur, Ht Yes
+Sep. 26 02:30-06:10 15.2 13.6 245.1 Sh, UR /
+Sep. 29 05:00-09:00 11.6 17.0 205.2 UR, JS /
+Sep. 30 09:00-14:20 10.4 18.6 191.7 Ht, Sv, Wz /
+Oct. 1 04:40-07:20 9.2 21.3 175.1 Km, Sh, KS Yes
+Oct. 3 09:00-13:40 6.7 27.1 151.2 Ht, Wz, Zc Yes
+Oct. 4 05:40-08:20 5.74 30.9 140.3 Bd, Hh, JS, Yg Yes
+Oct. 5 09:50-12:20 4.65 38.7 124.6 Hh, Mc, Ys Yes
+Oct. 7 03:30-05:30 2.85 67.6 89.3 Sh, Km /
+Oct. 12 09:50-11:00 5.3 19.4 211.2 Ht, Wz, Ys /
+Oct. 15 07:40-13:00 8.7 9.9 173.1 Hh, Ys, Bd /
+Oct. 18 07:40-09:10 12.33 5.6 135.8 Ys, Hh, Zc, Bd, KS Yes
+Oct. 19 03:00-08:00 13.5 4.4 120.9 Sh, Km, Ur /
+Oct. 20 01:30-08:00 14.8 3.6 108.2 Sh, Ur /
+Oct. 23 03:30-06:30 18.35 1.5 67.5 Sh, Km, Ur Yes
+Oct. 26 04:40-08:00 22.1 0.1 27.4 Sh, Km, Ur /
+a The reported duration corresponds to the maximum observation interval among all participating stations. Individual station
+observing times may be shorter owing to source visibility limitations and station scheduling constraints.
+b The Heliocentric Distance, Heliographic Latitude and Carrington Longitude of the projective point.
+c Whether the inward-propagating fluctuations were detected.
+B.CONFIGURATION OF MHD SIMULATION352
+The dynamics of a perfectly conducting fluid coupled to a magnetic field in the ideal magneto-hydrodynamic (MHD)353
+limit are governed by the following equations:354
+∂ρ
+∂t +∇ ·(ρv) = 0 (B1)355
+ρ
+ ∂v
+∂t + (v· ∇)v
+
+=−∇p+ 1
+µ0
+(∇ ×B)×B(B2)356
+PAGE 14
+14
+Figure 7.Wavelet cross-correlation (WTC) lags for different station baselines and observation intervals. Positive (red) and
+negative (blue) lags indicate radially outward and inward propagation, respectively. The magenta contours mark the WTC
+coefficient of 0.8. The dotted contours delineate significant wave packets, and the gray dotted curves indicate the cone of
+influence. ∆θdenotes the angle between the projected baseline and the local radial direction, evaluated at the midpoint of each
+observation interval.
+∂B
+∂t =∇ ×(v×B) (B3)357
+∂p
+∂t +v· ∇p+γp∇ ·v= 0 (B4)358
+∇ ·B= 0 (B5)359
+whereρis the mass density,vis the fluid velocity,pis the thermal pressure,Bis the magnetic field,µ 0 is the360
+permeability of free space, andγis the adiabatic index.361
+To launch a magnetosonic wave propagating along the magnetic field, we impose an initial velocity perturbation at362
+the left boundary of thex-domain. The perturbation amplitude is chosen to be sufficiently large to produce appreciable363
+density fluctuations and a measurable reflected-wave component, thereby enabling nonlinear wave interactions to be364
+clearly identified. In this case, the plasma velocity at the boundary is given by365
+v∥ =Asin(ωt) exp (−t/τ) (B6)366
+whereA= 72 km s −1 is the amplitude of the perturbation,ωis the angular frequency corresponding to the 0.66 mHz367
+observed in phase fluctuations (Fig. 4e), and the relaxation time constantτis taken as 125 minutes in this case.368
+The whole simulation domain ranges fromx= 0 tox= 10 9 m. For the background plasma densityρ, we use the369
+Allen-Baumbach model for electron densityn 0 (M. Patzold et al. 1987)370
+n0(r) =
+5.79
+r16 + 1.6
+r6 + 9.2×10 −3
+r2
+
+×10 8 cm−3 (B7)371
+PAGE 15
+15
+At r = 5.7R ⊙, this gives372
+n0 = 3.30×10 4 cm−3
+373
+ρ0 =n emp = 5.52×10 −17 kg/m3 (B8)374
+wheren 0 denotes the background plasma number density, andρ 0 represents the background plasma mass density.375
+And the background solar wind speed is estimated based on the velocity estimation for the Bd-Hh baseline. The376
+plasma thermal pressure is set to 1.84×10 −6 Pa, corresponding to an ion sound speed of 237 km s −1. The background377
+magnetic field is assumed to be 0.06 G, and in this case the Alfv´ en speed is larger than the acoustic speed. The378
+boundary condition used in the simulation is Neumann-type (i.e. zeroth-order interpolation along the flux tube).379
+380
+To validate the hypothesis of reflected MHD waves, we simulate a scenario in which magnetosonic waves interact381
+with a local plasma density enhancement centered atx= 3×10 8 m, featuring a density ratio of 3. Such density bulges382
+could be physically representative of structures observed in the solar corona and solar wind (B. Decraemer et al. 2019;383
+L. Kepko et al. 2020). To mitigate unphysical numerical reflections, a localized smoothing profile is adopted for the384
+density transition. The spatial distribution of the density enhancement is defined as385
+δρ(x) = 3ρ0
+
+tanh
+ x−x l
+s
+
+−tanh
+ x−x r
+s
+
+(B9)386
+whereδρ(x) represents the plasma density increment, andx l andx r denote the left and right boundaries of the387
+enhancement region, respectively. The parametersdetermines the characteristic width of the smoothing transition,388
+which is set to half of the width of the density bulge. The width of the density bulge is assumed to be one-fourth of389
+the magnetosonic wavelength. The local electron density perturbations induced by the waves are integrated along the390
+line-of-sight (LOS) direction to determine the phase fluctuation. The slab thickness of the solar wind is assumed to391
+be 1×10 8 m in order to match the observed phase fluctuations quantitatively.392
+393
+REFERENCES
+Barnes, W. T., Bobra, M. G., Christe, S. D., et al. 2020,394
+The Astrophysical Journal, 890, 68,395
+doi: 10.3847/1538-4357/ab4f7a396
+Bowen, T. A., Badman, S., Hellinger, P., & Bale, S. D.397
+2018, The Astrophysical Journal Letters, 854, L33,398
+doi: 10.3847/2041-8213/aaabbe399
+Calv´ es, G. M., Pogrebenko, S. V., Wagner, J. F., et al.400
+2021, Publications of the Astronomical Society of401
+Australia, 38, doi: 10.1017/pasa.2021.56402
+Cappuccio, P., Imamura, T., Doria, I., et al. 2024, Monthly403
+Notices of the Royal Astronomical Society, 533, 1560,404
+doi: 10.1093/mnras/stae1929405
+Chandran, B. D. G., & Perez, J. C. 2019, Journal of406
+Plasma Physics, 85, doi: 10.1017/s0022377819000540407
+Chaston, C. C., Bonnell, J. W., Bale, S. D., et al. 2020, The408
+Astrophysical Journal Supplement Series, 246, 71,409
+doi: 10.3847/1538-4365/ab745c410
+Chen, C. H. K., Bale, S. D., Bonnell, J. W., et al. 2020,411
+The Astrophysical Journal Supplement Series, 246, 53,412
+doi: 10.3847/1538-4365/ab60a3413
+Chiba, S., Shoda, M., & Imamura, T. 2025, Astronomy and414
+Astrophysics, 695, doi: 10.1051/0004-6361/202449189415
+Cranmer, S. R., & Winebarger, A. R. 2019, Annual Review416
+of Astronomy and Astrophysics, 57417
+Decraemer, B., Zhukov, A. N., & Doorsselaere, T. V. 2019,418
+The Astrophysical Journal, 883, 152,419
+doi: 10.3847/1538-4357/ab3b58420
+Dewar, R. L. 1970, Physics of Fluids, 13, 2710,421
+doi: 10.1063/1.1692854422
+Edwards, J., Calv´ es, G. M., Kummamuru, P., Said, N. M.,423
+& Ma, M. 2025, Space Weather, 23,424
+doi: 10.1029/2024SW004225425
+E.N., P. 1958, The Astrophysical Journal, 147004, 1.426
+https://sci-hub.tw/10.1002/iroh.19620470121427
+Gonz´ alez, C. A., Innocenti, M. E., & Tenerani, A. 2023,428
+Journal of Plasma Physics, 89,429
+doi: 10.1017/S0022377823000120430
+He, G., Jin, G., & Yang, Y. 2017, Space-Time Correlations431
+and Dynamic Coupling in Turbulent Flows, Annual432
+Reviews Inc., doi: 10.1146/annurev-fluid-010816-060309433
+He, Q., Liu, Q., & Zheng, X. 2017, Radio Science, 52, 235,434
+doi: 10.1002/2016RS006228435
+PAGE 16
+16
+Jacques, S. A. 1977, MOMENTUM AND ENERGY436
+TRANSPORT BY WAVES IN THE SOLAR437
+ATMOSPHERE AND SOLAR WIND, Tech. rep.438
+Kepko, L., Viall, N. M., & Wolfinger, K. 2020, Journal of439
+Geophysical Research: Space Physics, 125,440
+doi: 10.1029/2020JA028037441
+Krogulec, M., Musielak, Z. E., Suess, S. T., Nerney, S. F.,442
+& Moore, R. L. 1994, Journal of Geophysical Research:443
+Space Physics, 99, 23489, doi: 10.1029/94JA02209444
+Kumar, A., Howson, T. A., Pagano, P., & Moortel, I. D.445
+2025, Monthly Notices of the Royal Astronomical446
+Society, 541, 2843, doi: 10.1093/mnras/staf1189447
+Li, D., Zhang, X., & He, G. 2013, Physical Review E, 88,448
+021001(R), doi: 10.1103/PhysRevE.88.021001449
+Liu, Q. H., Huang, Y., Shu, F. C., et al. 2022, Scientia450
+Sinica: Physica, Mechanica et Astronomica, 52,451
+doi: 10.1360/SSPMA-2021-0204452
+Ma, M., Calv´ es, G. M., Cim` o, G., et al. 2022, The453
+Astrophysical Journal Letters, 940, L32,454
+doi: 10.3847/2041-8213/ac96e7455
+Mandal, S., Yuan, D., Fang, X., et al. 2016, The456
+Astrophysical Journal, 828, 72,457
+doi: 10.3847/0004-637x/828/2/72458
+Matthaeus, W. H., Bandyopadhyay, R., Brown, M. R.,459
+et al. 2019, The essential role of multi-point460
+measurements in turbulence investigations: the solar461
+wind beyond single scale and beyond the Taylor462
+Hypothesis, Tech. rep., Plasma 2020463
+Meyrand, R., Squire, J., Mallet, A., & Chandran, B. D.464
+2025, Journal of Plasma Physics, 91,465
+doi: 10.1017/S0022377824001181466
+Murabito, M., Stangalini, M., Laming, J. M., et al. 2024,467
+doi: 10.1103/PhysRevLett.132.215201468
+N.A.Armand, A.I.Efimov, L.N.Samoznaev, & M.K.Bird.469
+2003, The spectra and corss correlation of radio wave470
+frequency fluctuations observed during coronal plasma471
+sounding with spacecraft signals, Electrodynamics and472
+wave propagation473
+Patzold, M., Bird, M. K., Volland, H., et al. 1987, THE474
+MEAN CORONAL MAGNETIC FIELD475
+DETERMINED FROM HELIOS FARADAY476
+ROTATION MEASUREMENTS, Tech. rep.477
+Perez, J. C., Chandran, B. D., Klein, K. G., & Martinovi´ c,478
+M. M. 2021, Journal of Plasma Physics, 87,479
+doi: 10.1017/S0022377821000167480
+Schl¨ uter, W., & Behrend, D. 2007, Journal of Geodesy, 81,481
+379, doi: 10.1007/s00190-006-0131-z482
+Shuygina, N., Ivanov, D., Ipatov, A., et al. 2019, Geodesy483
+and Geodynamics, 10, 150,484
+doi: 10.1016/j.geog.2018.09.008485
+Taylor, G. I. 1938, Proceedings of the Royal Society A:486
+Mathematical, Physical and Engineering Sciences, 164,487
+476, doi: 10.1098/rspa.1938.0032488
+Torrence, C., & Compo, G. P. 1998, Bulletin of the489
+American Meteorological Society, 79, 61,490
+doi: 10.1175/1520-0477(1998)079⟨0061:491
+APGTWA⟩2.0.CO;2492
+Verscharen, D., Klein, K. G., & Maruca, B. A. 2019, The493
+multi-scale nature of the solar wind, Springer,494
+doi: 10.1007/s41116-019-0021-0495
+Viall, N. M., & Borovsky, J. E. 2020, Journal of Geophysical496
+Research: Space Physics, 125, doi: 10.1029/2018JA026005497
+Wang, Z., Ma, M., Liu, Q., et al. 2023, The Astrophysical498
+Journal Supplement Series, 269, 57,499
+doi: 10.3847/1538-4365/ad077f500
+Wexler, D., Imamura, T., Efimov, A., et al. 2020, Solar501
+Physics, 295, doi: 10.1007/s11207-020-01677-1502
+Xiong, M., Feng, X., Li, B., et al. 2023, Frontiers in503
+Astronomy and Space Sciences, 10, 1,504
+doi: 10.3389/fspas.2023.1159166505
+Yakovlev, O. I., Efimov, A. I., Yakubov, V. P., et al. 1989,506
+OCCULTATION OF THE PLASMANEAR THE SUN507
+AND THE SPEED OF THE SOLAR WIND:508
+FLUCTUATIONS IN THE FREQUENCY AND PHASE509
+OF RADIO WAVES AT TWO SEPARATED POINTS,510
+Tech. rep.511
+Yang, L., He, J., Verscharen, D., et al. 2023, Nature512
+Communications, 14, doi: 10.1038/s41467-023-43273-4513
+Yuan, L. 2026, MHD simulations for MHD wave reflection514
+in coronal solar wind, Zenodo,515
+doi: 10.5281/zenodo.19362826516
+Zhang, R., Zhang, H., Liu, J., et al. 2026, Space Science517
+Reviews, 222, doi: 10.1007/s11214-026-01268-9518
+Zhang, R., Li, H., Dong, G., et al. 2022, Kexue519
+Tongbao/Chinese Science Bulletin, 67, 4289,520
+doi: 10.1360/TB-2022-0629521
+Zhou, X., Shen, Y., Tang, Z., et al. 2022, Astronomy and522
+Astrophysics, 659, doi: 10.1051/0004-6361/202142536523
