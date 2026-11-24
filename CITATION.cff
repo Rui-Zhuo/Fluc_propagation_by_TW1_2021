@@ -1,0 +1,69 @@
+cff-version: 1.2.0
+message: Please cite the associated article when using this research code.
+title: Compressive-wave propagation and reflection with Tianwen-1
+type: software
+authors:
+  - family-names: Zhuo
+    given-names: Rui
+repository-code: https://github.com/Rui-Zhuo/Fluc_propagation_by_TW1_2021
+preferred-citation:
+  type: article
+  title: Spatially Inferred Signatures of Compressive Wave Reflection in the Solar Wind Acceleration Region
+  authors:
+    - family-names: "Ma"
+      given-names: "Maoli"
+    - family-names: "Zhuo"
+      given-names: "Rui"
+    - family-names: "Yuan"
+      given-names: "Liangliang"
+    - family-names: "Wu"
+      given-names: "Ziqi"
+    - family-names: "He"
+      given-names: "Jiansen"
+    - family-names: "Li"
+      given-names: "Peijia"
+    - family-names: "Molera Calvés"
+      given-names: "G."
+    - family-names: "Xiong"
+      given-names: "Ming"
+    - family-names: "Kong"
+      given-names: "Jing"
+    - family-names: "Jin"
+      given-names: "Wenma"
+    - family-names: "Liu"
+      given-names: "Qinghui"
+    - family-names: "Hou"
+      given-names: "Yubo"
+    - family-names: "Chen"
+      given-names: "Zhong"
+    - family-names: "Xia"
+      given-names: "Bo"
+    - family-names: "Wu"
+      given-names: "De"
+    - family-names: "Chu"
+      given-names: "Zhanghu"
+    - family-names: "Edwards"
+      given-names: "Jasper"
+    - family-names: "Cimò"
+      given-names: "Giuseppe"
+    - family-names: "Quick"
+      given-names: "Jonathan"
+    - family-names: "Kharinov"
+      given-names: "Mikhail"
+    - family-names: "Mikhailov"
+      given-names: "Andrey"
+    - family-names: "Zhang"
+      given-names: "Hua"
+    - family-names: "Hao"
+      given-names: "Longfei"
+    - family-names: "Gonzòlez"
+      given-names: "Javier J."
+    - family-names: "Morsiani"
+      given-names: "Marco"
+    - family-names: "Neidhardt"
+      given-names: "Alexander"
+  journal: The Astrophysical Journal
+  volume: "1012"
+  start: "116"
+  year: 2026
+  doi: 10.3847/1538-4357/aeb6b6

@@ -1,0 +1,1127 @@
+{
+  "analyse_wavelet_coherence": {
+    "1": {
+      "file_sh": "shshchan3_1frephase1s.dat",
+      "file_ur": "ururchan3_1frephase1s.dat",
+      "file1_name": "shshchan3_1frephase1s.dat",
+      "file2_name": "ururchan3_1frephase1s.dat",
+      "time_beg": 2021258033000,
+      "time_end": 2021258040000,
+      "data_relative": "2021/m1915x",
+      "result_relative": "m1915x",
+      "description": "2021/09/15(258), 02:00-04:00, sh-ur",
+      "time_formats": {
+        "shshchan3_1frephase1s.dat": "utc_code",
+        "ururchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "2": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file1_name": "HtHtchan3_1frephase1s.dat",
+      "file2_name": "YsYschan3_1frephase1s.dat",
+      "time_beg": 2021259124500,
+      "time_end": 2021259130800,
+      "data_relative": "2021/m1916x",
+      "result_relative": "m1916x",
+      "description": "2021/09/16(259), 12:00-14:00, Ht-Ys",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "3": {
+      "file_Ht": "HtHtchan3_1frephase2s.dat",
+      "file_km": "kmkmchan3_1frephase1s.dat",
+      "file_ur": "ururchan3_1frephase1s.dat",
+      "file1_name": "HtHtchan3_1frephase2s.dat",
+      "file2_name": "ururchan3_1frephase1s.dat",
+      "time_beg": 2021266051500,
+      "time_end": 2021266054500,
+      "data_relative": "2021/m1923x",
+      "result_relative": "m1923x",
+      "description": "2021/09/23(266), 05:15-08:15, Ht-km, Ht-ur, km-ur",
+      "time_formats": {
+        "HtHtchan3_1frephase2s.dat": "utc_code",
+        "kmkmchan3_1frephase1s.dat": "utc_code",
+        "ururchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "4": {
+      "file_sh": "shshchan3frephase.dat",
+      "file_ur": "ururchan3frephase.dat",
+      "file1_name": "shshchan3frephase.dat",
+      "file2_name": "ururchan3frephase.dat",
+      "time_beg": 2021269054500,
+      "time_end": 2021269061000,
+      "data_relative": "2021/m1926x",
+      "result_relative": "m1926x",
+      "description": "2021/09/26(269), 02:30-06:10, sh-ur",
+      "time_formats": {
+        "shshchan3frephase.dat": "utc_code",
+        "ururchan3frephase.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "5": {
+      "file_Js": "JSfreq.dat",
+      "file_ur": "ururchan3_1frephase1s.dat",
+      "file1_name": "JSfreq.dat",
+      "file2_name": "ururchan3_1frephase1s.dat",
+      "time_beg": 2021272080000,
+      "time_end": 2021272083000,
+      "data_relative": "2021/m1929x",
+      "result_relative": "m1929x",
+      "description": "2021/09/29(272), 05:00-09:00, Js-ur",
+      "time_formats": {
+        "JSfreq.dat": "sod",
+        "ururchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "6": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Sv": "SvSvchan3_1frephase1s.dat",
+      "file_Wz": "WzWzchan3_1frephase1s.dat",
+      "file1_name": "SvSvchan3_1frephase1s.dat",
+      "file2_name": "WzWzchan3_1frephase1s.dat",
+      "time_beg": 2021273134500,
+      "time_end": 2021273141200,
+      "data_relative": "2021/m1930x",
+      "result_relative": "m1930x",
+      "description": "2021/09/30(273), 09:00-14:20(12:00-13:00), Ht-Sv, Ht-Wz, Sv-Wz, (latitudinal fluctuaion)",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "SvSvchan3_1frephase1s.dat": "utc_code",
+        "WzWzchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "7": {
+      "file_sh": "shshchan3frephase1s.dat",
+      "file_km": "kmkmchan3frephase1s.dat",
+      "file_Ks": "KSfreq.dat",
+      "file1_name": "kmkmchan3frephase1s.dat",
+      "file2_name": "KSfreq.dat",
+      "time_beg": 2021274070000,
+      "time_end": 2021274073000,
+      "data_relative": "2021/m1a01x_up",
+      "result_relative": "m1a01x_up",
+      "description": "2021/10/01(274), 04:40-07:20, sh-km, sh-Ks, km-Ks",
+      "time_formats": {
+        "shshchan3frephase1s.dat": "utc_code",
+        "kmkmchan3frephase1s.dat": "utc_code",
+        "KSfreq.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "8": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Wz": "WzWzchan3_1frephase1s.dat",
+      "file_Zc": "ZcZcchan3_1frephase1s.dat",
+      "file1_name": "WzWzchan3_1frephase1s.dat",
+      "file2_name": "ZcZcchan3_1frephase1s.dat",
+      "time_beg": 2021276091600,
+      "time_end": 2021276094500,
+      "data_relative": "2021/m1a03x",
+      "result_relative": "m1a03x",
+      "description": "2021/10/03(276), 09:00-13:40(09:30-10:00), Ht-Wz, Ht-Zc, Wz-Zc, (latitudinal fluctuaion)",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "WzWzchan3_1frephase1s.dat": "utc_code",
+        "ZcZcchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "9": {
+      "file_Js": "JsJschan3_1frephase1s.dat",
+      "file_Bd": "BdBdchan3_1frephase1s.dat",
+      "file_Yg": "YgYgchan3_1frephase4s.dat",
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file1_name": "JsJschan3_1frephase1s.dat",
+      "file2_name": "BdBdchan3_1frephase1s.dat",
+      "time_beg": 2021277080000,
+      "time_end": 2021277082000,
+      "data_relative": "2021/m1a04x_renew",
+      "result_relative": "m1a04x_renew",
+      "description": "2021/10/04(277), 05:40-08:20, Js-Bd, Bd-Yg(4s), Yg-Hh(4s); Bd-Hh, Js-Hh, Js-Yg(4s), (inward propagation, latitudinal fluctuaion)",
+      "time_formats": {
+        "JsJschan3_1frephase1s.dat": "sod",
+        "BdBdchan3_1frephase1s.dat": "utc_code",
+        "YgYgchan3_1frephase4s.dat": "utc_code",
+        "HhHhchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "10": {
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file_Mc": "McMcchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file1_name": "McMcchan3_1frephase1s.dat",
+      "file2_name": "YsYschan3_1frephase1s.dat",
+      "time_beg": 2021278114500,
+      "time_end": 2021278121500,
+      "data_relative": "2021/m1a05x",
+      "result_relative": "m1a05x",
+      "description": "2021/10/05(278), 09:50-12:20, Hh-Mc, Hh-Ys, Mc-Ys",
+      "time_formats": {
+        "HhHhchan3_1frephase1s.dat": "utc_code",
+        "McMcchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "11": {
+      "file_sh": "shshchan3_1frephase5s.dat",
+      "file_km": "kmkmchan3_1frephase5s.dat",
+      "file1_name": "shshchan3_1frephase5s.dat",
+      "file2_name": "kmkmchan3_1frephase5s.dat",
+      "time_beg": 2021280034000,
+      "time_end": 2021280040000,
+      "data_relative": "2021/m1a07x",
+      "result_relative": "m1a07x",
+      "description": "2021/10/07(280), 03:30-05:30(03:30-04:00), sh-km, (polar region fluctuation)",
+      "time_formats": {
+        "shshchan3_1frephase5s.dat": "utc_code",
+        "kmkmchan3_1frephase5s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "12": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Wz": "WzWzchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file1_name": "WzWzchan3_1frephase1s.dat",
+      "file2_name": "YsYschan3_1frephase1s.dat",
+      "time_beg": 2021285103000,
+      "time_end": 2021285110000,
+      "data_relative": "2021/m1a12x",
+      "result_relative": "m1a12x",
+      "description": "2021/10/12(285), 09:50-11:00, Ht-Wz, Ht-Ys, Wz-Ys",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "WzWzchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "13": {
+      "file_hb": "hbhbchan3_1frephase5s.dat",
+      "file_sh": "shshchan3_1frephase1s.dat",
+      "file_km": "kmkmchan3_1frephase1s.dat",
+      "file1_name": "shshchan3_1frephase1s.dat",
+      "file2_name": "kmkmchan3_1frephase1s.dat",
+      "time_beg": 2021288024500,
+      "time_end": 2021288031500,
+      "data_relative": "2021/m1a15x",
+      "result_relative": "m1a15x",
+      "description": "2021/10/15(288), 01:00-04:00, sh-km, (fine structure)",
+      "time_formats": {
+        "hbhbchan3_1frephase5s.dat": "utc_code",
+        "shshchan3_1frephase1s.dat": "utc_code",
+        "kmkmchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "14": {
+      "file_Bd": "BdBdchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file_Js": "JsJschan3_1frephase1s.dat",
+      "file1_name": "YsYschan3_1frephase1s.dat",
+      "file2_name": "HhHhchan3_1frephase1s.dat",
+      "time_beg": 2021288112700,
+      "time_end": 2021288114500,
+      "data_relative": "2021/m1a15y",
+      "result_relative": "m1a15y",
+      "description": "2021/10/15(288), 07:40-13:00, Bd-Ys, Bd-Hh, Ys-Hh, Js-Bd, Js-Ys, Js-Hh, (CME)",
+      "time_formats": {
+        "BdBdchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code",
+        "HhHhchan3_1frephase1s.dat": "sod",
+        "JsJschan3_1frephase1s.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "15": {
+      "file_Bd": "BdBdchan3_1frephase1s.dat",
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file_Ks": "KsKschan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file_Zc": "ZcZcchan3_1frephase1s.dat",
+      "file1_name": "BdBdchan3_1frephase1s.dat",
+      "file2_name": "KsKschan3_1frephase1s.dat",
+      "time_beg": 2021291071500,
+      "time_end": 2021291074500,
+      "data_relative": "2021/m1a18x",
+      "result_relative": "m1a18x",
+      "description": "2021/10/18(291), 07:40-09:10, Bd-Zc, Hh-Ks, Hh-Ys, Hh-Zc, Ys-Zc, Zc-Ks; Bd-Hh, Bd-Ys, Bd-Ks, Ys-Ks",
+      "time_formats": {
+        "BdBdchan3_1frephase1s.dat": "utc_code",
+        "HhHhchan3_1frephase1s.dat": "utc_code",
+        "KsKschan3_1frephase1s.dat": "sod",
+        "YsYschan3_1frephase1s.dat": "utc_code",
+        "ZcZcchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "16": {
+      "file_sh": "shshchan3_1frephase.dat",
+      "file_km": "kmkmchan3_1frephase.dat",
+      "file_ur": "ururchan3_1frephase.dat",
+      "file1_name": "shshchan3_1frephase.dat",
+      "file2_name": "ururchan3_1frephase.dat",
+      "time_beg": 2021292030000,
+      "time_end": 2021292031000,
+      "data_relative": "2021/s1a19x",
+      "result_relative": "s1a19x",
+      "description": "2021/10/19(292), 03:00-08:00, sh-km, sh-ur, km-ur; 9min data-7min gap-9min data-7min gap-...",
+      "time_formats": {
+        "shshchan3_1frephase.dat": "sod",
+        "kmkmchan3_1frephase.dat": "sod",
+        "ururchan3_1frephase.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "17": {
+      "file_sh": "shshchan3_1frephase.dat",
+      "file_km": "kmkmchan3_1frephase.dat",
+      "file_ur": "ururchan3_1frephase.dat",
+      "file1_name": "kmkmchan3_1frephase.dat",
+      "file2_name": "ururchan3_1frephase.dat",
+      "time_beg": 2021293023200,
+      "time_end": 2021293024300,
+      "data_relative": "2021/s1a20x",
+      "result_relative": "s1a20x",
+      "description": "2021/10/20(293), 01:30-08:00, sh-km, sh-ur, km-ur; 14min-16min-16min-16min-...",
+      "time_formats": {
+        "shshchan3_1frephase.dat": "sod",
+        "kmkmchan3_1frephase.dat": "sod",
+        "ururchan3_1frephase.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "18": {
+      "file_sh": "shshchan5_1frephase1s.dat",
+      "file_km": "kmkmchan5_1frephase1s.dat",
+      "file_ur": "ururchan5_1frephase1s.dat",
+      "file1_name": "kmkmchan5_1frephase1s.dat",
+      "file2_name": "ururchan5_1frephase1s.dat",
+      "time_beg": 2021296060000,
+      "time_end": 2021296063000,
+      "data_relative": "2021/m1a23x",
+      "result_relative": "m1a23x",
+      "description": "2021/10/23(296), 03:30-06:30, sh-km, sh-ur, km-ur; gap point(035600.5, 041329.5)",
+      "time_formats": {
+        "shshchan5_1frephase1s.dat": "utc_code",
+        "kmkmchan5_1frephase1s.dat": "utc_code",
+        "ururchan5_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "19": {
+      "file_sh": "shshchan3_1frephase.dat",
+      "file_km": "kmkmchan3_1frephase.dat",
+      "file_ur": "ururchan3_1frephase.dat",
+      "file1_name": "shshchan3_1frephase.dat",
+      "file2_name": "ururchan3_1frephase.dat",
+      "time_beg": 2021299073400,
+      "time_end": 2021299075000,
+      "data_relative": "2021/s1a26x",
+      "result_relative": "s1a26x",
+      "description": "2021/10/26(299), 04:40-08:00, sh-km, sh-ur, km-ur; 14min-16min-16min-16min-...",
+      "time_formats": {
+        "shshchan3_1frephase.dat": "sod",
+        "kmkmchan3_1frephase.dat": "sod",
+        "ururchan3_1frephase.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "20": {
+      "file_Ht": "HTHTsignum113frephase1s.dat",
+      "file_S6": "S6S6signum113frephase1s.dat",
+      "file_Sv": "SVSVsignum113frephase1s.dat",
+      "file1_name": "HTHTsignum113frephase1s.dat",
+      "file2_name": "S6S6signum113frephase1s.dat",
+      "time_beg": 2023301083000,
+      "time_end": 2023301085900,
+      "data_relative": "2023/m3a28x",
+      "result_relative": "m3a28x",
+      "description": "2023/10/28(301), Ht, S6, Sv",
+      "time_formats": {
+        "HTHTsignum113frephase1s.dat": "utc_code",
+        "S6S6signum113frephase1s.dat": "utc_code",
+        "SVSVsignum113frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {
+        "S6S6signum113frephase1s.dat": -1
+      }
+    },
+    "21": {
+      "file_CD": "CDCDsignum113frephase2s.dat",
+      "file_Hh": "HHHHsignum113frephase2s.dat",
+      "file_Sv": "SVSVsignum113frephase2s.dat",
+      "file_ur": "URURsignum113frephase2s.dat",
+      "file1_name": "SVSVsignum113frephase2s.dat",
+      "file2_name": "URURsignum113frephase2s.dat",
+      "time_beg": 2023318093000,
+      "time_end": 2023318100000,
+      "data_relative": "2023/m3b14x",
+      "result_relative": "m3b14x",
+      "description": "2023/11/14(318), CD, Hh, Sv, ur",
+      "time_formats": {
+        "CDCDsignum113frephase2s.dat": "utc_code",
+        "HHHHsignum113frephase2s.dat": "utc_code",
+        "SVSVsignum113frephase2s.dat": "utc_code",
+        "URURsignum113frephase2s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "22": {
+      "file_Hh": "HHHHsignum113frephase2s.dat",
+      "file_Sv": "SVSVsignum113frephase2s.dat",
+      "file_TM": "TMTMsignum113frephase1s.dat",
+      "file_ur": "URURsignum113frephase1s.dat",
+      "file1_name": "TMTMsignum113frephase1s.dat",
+      "file2_name": "URURsignum113frephase1s.dat",
+      "time_beg": 2023320023000,
+      "time_end": 2023320030000,
+      "data_relative": "2023/m3b16x",
+      "result_relative": "m3b16x",
+      "description": "2023/11/16(320), Hh, Sv, TM, ur",
+      "time_formats": {
+        "HHHHsignum113frephase2s.dat": "utc_code",
+        "SVSVsignum113frephase2s.dat": "utc_code",
+        "TMTMsignum113frephase1s.dat": "utc_code",
+        "URURsignum113frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    }
+  },
+  "analyse_wavelet_coherence_for_phase": {
+    "1": {
+      "file_sh": "TWshfpda.dat",
+      "file_km": "TWkmfpda.dat",
+      "file1_name": "TWshfpda.dat",
+      "file2_name": "TWkmfpda.dat",
+      "time_beg": 2021274043000,
+      "time_end": 2021274050000,
+      "data_relative": "2021/[phase]/m1a01x",
+      "result_relative": "[phase]/m1a01x",
+      "description": "2021/10/01(274), 04:40-08:00, sh-km",
+      "time_formats": {
+        "TWshfpda.dat": "sod",
+        "TWkmfpda.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "2": {
+      "file_sh": "TWshfpda.dat",
+      "file_km": "TWkmfpda.dat",
+      "file_ur": "TWurfpda.dat",
+      "file1_name": "TWkmfpda.dat",
+      "file2_name": "TWurfpda.dat",
+      "time_beg": 2021296060000,
+      "time_end": 2021296063000,
+      "data_relative": "2021/[phase]/m1a23x",
+      "result_relative": "[phase]/m1a23x",
+      "description": "2021/10/23(296), 04:18-06:30, sh-km, sh-ur, km-ur",
+      "time_formats": {
+        "TWshfpda.dat": "sod",
+        "TWkmfpda.dat": "sod",
+        "TWurfpda.dat": "sod"
+      },
+      "frequency_signs": {}
+    }
+  },
+  "analyse_wavelet_coherence_for_PLL": {
+    "1": {
+      "file_sh": "TWshfreq_1s_t.dat",
+      "file_km": "TWkmfreq_1s_t.dat",
+      "file_ur": "TWurfreq_1s_t.dat",
+      "file_sh_high_resol": "TWshfreq_short_t.dat",
+      "file_km_high_resol": "TWkmfreq_short_t.dat",
+      "file_ur_high_resol": "TWurfreq_short_t.dat",
+      "file1_name": "TWshfreq_short_t.dat",
+      "file2_name": "TWurfreq_short_t.dat",
+      "time_beg": 2021296054000,
+      "time_end": 2021296055000,
+      "data_relative": "2021/m1a23x/high_resol",
+      "result_relative": "m1a23x/high_resol",
+      "description": "2021/10/23(296), 04:23-06:30, sh-km, sh-ur, km-ur",
+      "time_formats": {
+        "TWshfreq_1s_t.dat": "sod",
+        "TWkmfreq_1s_t.dat": "sod",
+        "TWurfreq_1s_t.dat": "sod",
+        "TWshfreq_short_t.dat": "sod",
+        "TWkmfreq_short_t.dat": "sod",
+        "TWurfreq_short_t.dat": "sod"
+      },
+      "frequency_signs": {}
+    }
+  },
+  "reconstruct_wavelet": {
+    "1": {
+      "file_sh": "shshchan3_1frephase1s.dat",
+      "file_ur": "ururchan3_1frephase1s.dat",
+      "file1_name": "shshchan3_1frephase1s.dat",
+      "file2_name": "ururchan3_1frephase1s.dat",
+      "time_beg": 2021258033000,
+      "time_end": 2021258040000,
+      "data_relative": "2021/m1915x",
+      "result_relative": "m1915x/recon",
+      "description": "2021/09/15(258), 02:00-04:00, sh-ur",
+      "time_formats": {
+        "shshchan3_1frephase1s.dat": "utc_code",
+        "ururchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "2": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file1_name": "HtHtchan3_1frephase1s.dat",
+      "file2_name": "YsYschan3_1frephase1s.dat",
+      "time_beg": 2021259124500,
+      "time_end": 2021259130800,
+      "data_relative": "2021/m1916x",
+      "result_relative": "m1916x/recon",
+      "description": "2021/09/16(259), 12:00-14:00, Ht-Ys",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "3": {
+      "file_Ht": "HtHtchan3_1frephase2s.dat",
+      "file_km": "kmkmchan3_1frephase1s.dat",
+      "file_ur": "ururchan3_1frephase1s.dat",
+      "file1_name": "HtHtchan3_1frephase2s.dat",
+      "file2_name": "ururchan3_1frephase1s.dat",
+      "time_beg": 2021266051500,
+      "time_end": 2021266054500,
+      "data_relative": "2021/m1923x",
+      "result_relative": "m1923x/recon",
+      "description": "2021/09/23(266), 05:15-08:15, Ht-km, Ht-ur, km-ur",
+      "time_formats": {
+        "HtHtchan3_1frephase2s.dat": "utc_code",
+        "kmkmchan3_1frephase1s.dat": "utc_code",
+        "ururchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "4": {
+      "file_sh": "shshchan3frephase.dat",
+      "file_ur": "ururchan3frephase.dat",
+      "file1_name": "shshchan3frephase.dat",
+      "file2_name": "ururchan3frephase.dat",
+      "time_beg": 2021269054500,
+      "time_end": 2021269061000,
+      "data_relative": "2021/m1926x",
+      "result_relative": "m1926x/recon",
+      "description": "2021/09/26(269), 02:30-06:10, sh-ur",
+      "time_formats": {
+        "shshchan3frephase.dat": "utc_code",
+        "ururchan3frephase.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "5": {
+      "file_Js": "JSfreq.dat",
+      "file_ur": "ururchan3_1frephase1s.dat",
+      "file1_name": "JSfreq.dat",
+      "file2_name": "ururchan3_1frephase1s.dat",
+      "time_beg": 2021272080000,
+      "time_end": 2021272083000,
+      "data_relative": "2021/m1929x",
+      "result_relative": "m1929x/recon",
+      "description": "2021/09/29(272), 05:00-09:00, Js-ur",
+      "time_formats": {
+        "JSfreq.dat": "sod",
+        "ururchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "6": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Sv": "SvSvchan3_1frephase1s.dat",
+      "file_Wz": "WzWzchan3_1frephase1s.dat",
+      "file1_name": "SvSvchan3_1frephase1s.dat",
+      "file2_name": "WzWzchan3_1frephase1s.dat",
+      "time_beg": 2021273134500,
+      "time_end": 2021273141200,
+      "data_relative": "2021/m1930x",
+      "result_relative": "m1930x/recon",
+      "description": "2021/09/30(273), 09:00-14:20(12:00-13:00), Ht-Sv, Ht-Wz, Sv-Wz, (latitudinal fluctuaion)",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "SvSvchan3_1frephase1s.dat": "utc_code",
+        "WzWzchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "7": {
+      "file_sh": "shshchan3frephase1s.dat",
+      "file_km": "kmkmchan3frephase1s.dat",
+      "file_Ks": "KSfreq.dat",
+      "file1_name": "shshchan3frephase1s.dat",
+      "file2_name": "kmkmchan3frephase1s.dat",
+      "time_beg": 2021274071500,
+      "time_end": 2021274074500,
+      "data_relative": "2021/m1a01x_up",
+      "result_relative": "m1a01x_up/recon",
+      "description": "2021/10/01(274), 04:40-07:20, sh-km, sh-Ks, km-Ks",
+      "time_formats": {
+        "shshchan3frephase1s.dat": "utc_code",
+        "kmkmchan3frephase1s.dat": "utc_code",
+        "KSfreq.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "8": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Wz": "WzWzchan3_1frephase1s.dat",
+      "file_Zc": "ZcZcchan3_1frephase1s.dat",
+      "file1_name": "HtHtchan3_1frephase1s.dat",
+      "file2_name": "WzWzchan3_1frephase1s.dat",
+      "time_beg": 2021276090000,
+      "time_end": 2021276093000,
+      "data_relative": "2021/m1a03x",
+      "result_relative": "m1a03x/recon",
+      "description": "2021/10/03(276), 09:00-13:40(09:30-10:00), Ht-Wz, Ht-Zc, Wz-Zc, (latitudinal fluctuaion)",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "WzWzchan3_1frephase1s.dat": "utc_code",
+        "ZcZcchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "9": {
+      "file_Js": "JsJschan3_1frephase1s.dat",
+      "file_Bd": "BdBdchan3_1frephase1s.dat",
+      "file_Yg": "YgYgchan3_1frephase4s.dat",
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file1_name": "JsJschan3_1frephase1s.dat",
+      "file2_name": "BdBdchan3_1frephase1s.dat",
+      "time_beg": 2021277080000,
+      "time_end": 2021277082000,
+      "data_relative": "2021/m1a04x_renew",
+      "result_relative": "m1a04x_renew/recon",
+      "description": "2021/10/04(277), 05:40-08:20, Js-Bd, Bd-Yg(4s), Yg-Hh(4s); Bd-Hh, Js-Hh, Js-Yg(4s), (inward propagation, latitudinal fluctuaion)",
+      "time_formats": {
+        "JsJschan3_1frephase1s.dat": "sod",
+        "BdBdchan3_1frephase1s.dat": "utc_code",
+        "YgYgchan3_1frephase4s.dat": "utc_code",
+        "HhHhchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "10": {
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file_Mc": "McMcchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file1_name": "HhHhchan3_1frephase1s.dat",
+      "file2_name": "McMcchan3_1frephase1s.dat",
+      "time_beg": 2021278111500,
+      "time_end": 2021278114500,
+      "data_relative": "2021/m1a05x",
+      "result_relative": "m1a05x/recon",
+      "description": "2021/10/05(278), 09:50-12:20, Hh-Mc, Hh-Ys, Mc-Ys",
+      "time_formats": {
+        "HhHhchan3_1frephase1s.dat": "utc_code",
+        "McMcchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "11": {
+      "file_sh": "shshchan3_1frephase5s.dat",
+      "file_km": "kmkmchan3_1frephase5s.dat",
+      "file1_name": "shshchan3_1frephase5s.dat",
+      "file2_name": "kmkmchan3_1frephase5s.dat",
+      "time_beg": 2021280034000,
+      "time_end": 2021280040000,
+      "data_relative": "2021/m1a07x",
+      "result_relative": "m1a07x/recon",
+      "description": "2021/10/07(280), 03:30-05:30(03:30-04:00), sh-km, (polar region fluctuation)",
+      "time_formats": {
+        "shshchan3_1frephase5s.dat": "utc_code",
+        "kmkmchan3_1frephase5s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "12": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Wz": "WzWzchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file1_name": "HtHtchan3_1frephase1s.dat",
+      "file2_name": "WzWzchan3_1frephase1s.dat",
+      "time_beg": 2021285094500,
+      "time_end": 2021285101500,
+      "data_relative": "2021/m1a12x",
+      "result_relative": "m1a12x/recon",
+      "description": "2021/10/12(285), 09:50-11:00, Ht-Wz, Ht-Ys, Wz-Ys",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "WzWzchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "13": {
+      "file_hb": "hbhbchan3_1frephase5s.dat",
+      "file_sh": "shshchan3_1frephase1s.dat",
+      "file_km": "kmkmchan3_1frephase1s.dat",
+      "file1_name": "shshchan3_1frephase1s.dat",
+      "file2_name": "kmkmchan3_1frephase1s.dat",
+      "time_beg": 2021288024500,
+      "time_end": 2021288031500,
+      "data_relative": "2021/m1a15x",
+      "result_relative": "m1a15x/recon",
+      "description": "2021/10/15(288), 01:00-04:00, sh-km, (fine structure)",
+      "time_formats": {
+        "hbhbchan3_1frephase5s.dat": "utc_code",
+        "shshchan3_1frephase1s.dat": "utc_code",
+        "kmkmchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "14": {
+      "file_Bd": "BdBdchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file_Js": "JsJschan3_1frephase1s.dat",
+      "file1_name": "BdBdchan3_1frephase1s.dat",
+      "file2_name": "HhHhchan3_1frephase1s.dat",
+      "time_beg": 2021288080000,
+      "time_end": 2021288082000,
+      "data_relative": "2021/m1a15y",
+      "result_relative": "m1a15y/recon",
+      "description": "2021/10/15(288), 07:40-13:00, Bd-Ys, Bd-Hh, Ys-Hh, Js-Bd, Js-Ys, Js-Hh, (CME)",
+      "time_formats": {
+        "BdBdchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code",
+        "HhHhchan3_1frephase1s.dat": "sod",
+        "JsJschan3_1frephase1s.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "15": {
+      "file_Bd": "BdBdchan3_1frephase1s.dat",
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file_Ks": "KsKschan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "file_Zc": "ZcZcchan3_1frephase1s.dat",
+      "file1_name": "YsYschan3_1frephase1s.dat",
+      "file2_name": "ZcZcchan3_1frephase1s.dat",
+      "time_beg": 2021291080000,
+      "time_end": 2021291083000,
+      "data_relative": "2021/m1a18x",
+      "result_relative": "m1a18x/recon",
+      "description": "2021/10/18(291), 07:40-09:10, Bd-Zc, Hh-Ks, Hh-Ys, Hh-Zc, Ys-Zc, Zc-Ks; Bd-Hh, Bd-Ys, Bd-Ks, Ys-Ks",
+      "time_formats": {
+        "BdBdchan3_1frephase1s.dat": "utc_code",
+        "HhHhchan3_1frephase1s.dat": "utc_code",
+        "KsKschan3_1frephase1s.dat": "sod",
+        "YsYschan3_1frephase1s.dat": "utc_code",
+        "ZcZcchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "16": {
+      "file_sh": "shshchan3_1frephase.dat",
+      "file_km": "kmkmchan3_1frephase.dat",
+      "file_ur": "ururchan3_1frephase.dat",
+      "file1_name": "kmkmchan3_1frephase.dat",
+      "file2_name": "ururchan3_1frephase.dat",
+      "time_beg": 2021292033300,
+      "time_end": 2021292034200,
+      "data_relative": "2021/s1a19x",
+      "result_relative": "s1a19x/recon",
+      "description": "2021/10/19(292), 03:00-08:00, sh-km, sh-ur, km-ur; 9min data-7min gap-9min data-7min gap-...",
+      "time_formats": {
+        "shshchan3_1frephase.dat": "sod",
+        "kmkmchan3_1frephase.dat": "sod",
+        "ururchan3_1frephase.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "17": {
+      "file_sh": "shshchan3_1frephase.dat",
+      "file_km": "kmkmchan3_1frephase.dat",
+      "file_ur": "ururchan3_1frephase.dat",
+      "file1_name": "shshchan3_1frephase.dat",
+      "file2_name": "ururchan3_1frephase.dat",
+      "time_beg": 2021293052800,
+      "time_end": 2021293054400,
+      "data_relative": "2021/s1a20x",
+      "result_relative": "s1a20x/recon",
+      "description": "2021/10/20(293), 01:30-08:00, sh-km, sh-ur, km-ur; 14min-16min-16min-16min-...",
+      "time_formats": {
+        "shshchan3_1frephase.dat": "sod",
+        "kmkmchan3_1frephase.dat": "sod",
+        "ururchan3_1frephase.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "18": {
+      "file_sh": "shshchan5_1frephase1s.dat",
+      "file_km": "kmkmchan5_1frephase1s.dat",
+      "file_ur": "ururchan5_1frephase1s.dat",
+      "file1_name": "shshchan5_1frephase1s.dat",
+      "file2_name": "ururchan5_1frephase1s.dat",
+      "time_beg": 2021296054500,
+      "time_end": 2021296061500,
+      "data_relative": "2021/m1a23x",
+      "result_relative": "m1a23x/recon",
+      "description": "2021/10/23(296), 03:30-06:30, sh-km, sh-ur, km-ur; gap point(035600.5, 041329.5)",
+      "time_formats": {
+        "shshchan5_1frephase1s.dat": "utc_code",
+        "kmkmchan5_1frephase1s.dat": "utc_code",
+        "ururchan5_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "19": {
+      "file_sh": "shshchan3_1frephase.dat",
+      "file_km": "kmkmchan3_1frephase.dat",
+      "file_ur": "ururchan3_1frephase.dat",
+      "file1_name": "shshchan3_1frephase.dat",
+      "file2_name": "ururchan3_1frephase.dat",
+      "time_beg": 2021299073400,
+      "time_end": 2021299075000,
+      "data_relative": "2021/s1a26x",
+      "result_relative": "s1a26x/recon",
+      "description": "2021/10/26(299), 04:40-08:00, sh-km, sh-ur, km-ur; 14min-16min-16min-16min-...",
+      "time_formats": {
+        "shshchan3_1frephase.dat": "sod",
+        "kmkmchan3_1frephase.dat": "sod",
+        "ururchan3_1frephase.dat": "sod"
+      },
+      "frequency_signs": {}
+    },
+    "20": {
+      "file_Ht": "HTHTsignum113frephase1s.dat",
+      "file_S6": "S6S6signum113frephase1s.dat",
+      "file_Sv": "SVSVsignum113frephase1s.dat",
+      "file1_name": "HTHTsignum113frephase1s.dat",
+      "file2_name": "S6S6signum113frephase1s.dat",
+      "time_beg": 2023301083000,
+      "time_end": 2023301085900,
+      "data_relative": "2023/m3a28x",
+      "result_relative": "m3a28x/recon",
+      "description": "2023/10/28(301), Ht, S6, Sv",
+      "time_formats": {
+        "HTHTsignum113frephase1s.dat": "utc_code",
+        "S6S6signum113frephase1s.dat": "utc_code",
+        "SVSVsignum113frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {
+        "S6S6signum113frephase1s.dat": -1
+      }
+    },
+    "21": {
+      "file_CD": "CDCDsignum113frephase2s.dat",
+      "file_Hh": "HHHHsignum113frephase2s.dat",
+      "file_Sv": "SVSVsignum113frephase2s.dat",
+      "file_ur": "URURsignum113frephase2s.dat",
+      "file1_name": "SVSVsignum113frephase2s.dat",
+      "file2_name": "URURsignum113frephase2s.dat",
+      "time_beg": 2023318093000,
+      "time_end": 2023318100000,
+      "data_relative": "2023/m3b14x",
+      "result_relative": "m3b14x",
+      "description": "2023/11/14(318), CD, Hh, Sv, ur",
+      "time_formats": {
+        "CDCDsignum113frephase2s.dat": "utc_code",
+        "HHHHsignum113frephase2s.dat": "utc_code",
+        "SVSVsignum113frephase2s.dat": "utc_code",
+        "URURsignum113frephase2s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "22": {
+      "file_Hh": "HHHHsignum113frephase2s.dat",
+      "file_Sv": "SVSVsignum113frephase2s.dat",
+      "file_TM": "TMTMsignum113frephase1s.dat",
+      "file_ur": "URURsignum113frephase1s.dat",
+      "file1_name": "TMTMsignum113frephase1s.dat",
+      "file2_name": "URURsignum113frephase1s.dat",
+      "time_beg": 2023320023000,
+      "time_end": 2023320030000,
+      "data_relative": "2023/m3b16x",
+      "result_relative": "m3b16x",
+      "description": "2023/11/16(320), Hh, Sv, TM, ur",
+      "time_formats": {
+        "HHHHsignum113frephase2s.dat": "utc_code",
+        "SVSVsignum113frephase2s.dat": "utc_code",
+        "TMTMsignum113frephase1s.dat": "utc_code",
+        "URURsignum113frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    }
+  },
+  "calc_power_index": {
+    "1": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Sv": "SvSvchan3_1frephase1s.dat",
+      "file_Wz": "WzWzchan3_1frephase1s.dat",
+      "fs": 1,
+      "file1_name": "HtHtchan3_1frephase1s.dat",
+      "file2_name": "SvSvchan3_1frephase1s.dat",
+      "time_beg": 2021273123000,
+      "time_end": 2021273130000,
+      "time_lb": 2021273123000,
+      "time_ub": 2021273123500,
+      "data_relative": "2021/outdated/m1930x_up_new",
+      "result_relative": "m1930x_up_new",
+      "description": "2021/09/30(273), 12:00-13:00, Ht-Sv, Ht-Wz, Sv-Wz, (latitudinal fluctuaion)",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "SvSvchan3_1frephase1s.dat": "utc_code",
+        "WzWzchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "2": {
+      "file_Js": "JsJschan3_1frephase1s.dat",
+      "file_Bd": "BdBdchan3_1frephase1s.dat",
+      "file_Yg": "YgYgchan3_1frephase4s.dat",
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "fs": 1,
+      "file1_name": "JsJschan3_1frephase1s.dat",
+      "file2_name": "BdBdchan3_1frephase1s.dat",
+      "time_beg": 2021277080000,
+      "time_end": 2021277083000,
+      "time_lb": 2021277081000,
+      "time_ub": 2021277081500,
+      "data_relative": "2021/m1a04x_renew",
+      "result_relative": "m1a04x_renew",
+      "description": "2021/10/04(277), 05:40-08:20, Js-Bd, Bd-Yg, Yg-Hh, (inward propagation, latitudinal fluctuaion, outward propagation)",
+      "time_formats": {
+        "JsJschan3_1frephase1s.dat": "sod",
+        "BdBdchan3_1frephase1s.dat": "utc_code",
+        "YgYgchan3_1frephase4s.dat": "utc_code",
+        "HhHhchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "3": {
+      "file_sh": "shshchan3_1frephase5s.dat",
+      "file_km": "kmkmchan3_1frephase5s.dat",
+      "fs": 0.2,
+      "file1_name": "shshchan3_1frephase5s.dat",
+      "file2_name": "kmkmchan3_1frephase5s.dat",
+      "time_beg": 2021280033000,
+      "time_end": 2021280040000,
+      "time_lb": 2021280034500,
+      "time_ub": 2021280035000,
+      "data_relative": "2021/outdated/m1a07x_up",
+      "result_relative": "m1a07x_up",
+      "description": "2021/10/07(280), 03:30-04:00, sh-km, (polar region fluctuation)",
+      "time_formats": {
+        "shshchan3_1frephase5s.dat": "utc_code",
+        "kmkmchan3_1frephase5s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "4": {
+      "file_Bd": "BdBdchan3_1frephase1s.dat",
+      "file_Hh": "HhHhchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "fs": 1,
+      "file1_name": "BdBdchan3_1frephase1s.dat",
+      "file2_name": "HhHhchan3_1frephase1s.dat",
+      "time_beg": 2021288090000,
+      "time_end": 2021288093000,
+      "time_lb": 2021288090000,
+      "time_ub": 2021288090500,
+      "data_relative": "2021/outdated/m1a15y_copy",
+      "result_relative": "m1a15y_copy",
+      "description": "2021/10/15(288), 01:00-04:00, Bd-Hh, Bd-Ys, Hh-Ys, (fine structure)",
+      "time_formats": {
+        "BdBdchan3_1frephase1s.dat": "utc_code",
+        "HhHhchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "5": {
+      "file_km": "kmkmchan3frephase1s.dat",
+      "file_sh": "shshchan3frephase1s.dat",
+      "fs": 1,
+      "file1_name": "kmkmchan3frephase1s.dat",
+      "file2_name": "shshchan3frephase1s.dat",
+      "time_beg": 2021274073000,
+      "time_end": 2021274080000,
+      "time_lb": 2021274074000,
+      "time_ub": 2021274074500,
+      "data_relative": "2021/m1a01x_up",
+      "result_relative": "m1a01x_up",
+      "description": "2021/10/01(274), 04:40-08:00, km, sh",
+      "time_formats": {
+        "kmkmchan3frephase1s.dat": "utc_code",
+        "shshchan3frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "6": {
+      "file_km": "kmkmchan3_1frephase1s.dat",
+      "fs": 1,
+      "file1_name": "kmkmchan3_1frephase1s.dat",
+      "file2_name": "kmkmchan3_1frephase1s.dat",
+      "time_beg": 2021283023000,
+      "time_end": 2021283030000,
+      "time_lb": 2021283025000,
+      "time_ub": 2021283025500,
+      "data_relative": "2021/m1a10x_up",
+      "result_relative": "m1a10x_up",
+      "description": "2021/10/10(283), 01:00-03:00, km",
+      "time_formats": {
+        "kmkmchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "7": {
+      "file_Ht": "HtHtchan3_1frephase1s.dat",
+      "file_Wz": "WzWzchan3_1frephase1s.dat",
+      "file_Ys": "YsYschan3_1frephase1s.dat",
+      "fs": 1,
+      "file1_name": "HtHtchan3_1frephase1s.dat",
+      "file2_name": "WzWzchan3_1frephase1s.dat",
+      "time_beg": 2021285100000,
+      "time_end": 2021285103000,
+      "time_lb": 2021285100000,
+      "time_ub": 2021285100500,
+      "data_relative": "2021/outdated/m1a12x_up_new",
+      "result_relative": "m1a12x_up_new",
+      "description": "2021/10/12(285), 09:50-11:00, Ht, Wz, Ys",
+      "time_formats": {
+        "HtHtchan3_1frephase1s.dat": "utc_code",
+        "WzWzchan3_1frephase1s.dat": "utc_code",
+        "YsYschan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    }
+  },
+  "plot_wavelet_spectrum": {
+    "0": {
+      "file_name": "BdBdchan3_1frephase2s.dat",
+      "var_list": [
+        "Residual Frequency",
+        "Residual Phase",
+        "Signal Density",
+        "Noise Density"
+      ],
+      "unit_list": [
+        "Hz",
+        "rad",
+        "dB",
+        "dB"
+      ],
+      "data_relative": "2021/m1a04x_renew",
+      "result_relative": "plot_wavelet_spectrum",
+      "description": "",
+      "time_formats": {
+        "BdBdchan3_1frephase2s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "1": {
+      "file_name": "TWkmfpda.dat",
+      "var_list": [
+        "Residual Frequency-1",
+        "Residual Phase-1",
+        "Relative Time Delay-1",
+        "Residual Frequency-2",
+        "Residual Phase-2",
+        "Relative Time Delay-2",
+        "Signal-to-Noise Ratio",
+        "Signal Strength"
+      ],
+      "unit_list": [
+        "Hz",
+        "rad",
+        "ns",
+        "Hz",
+        "rad",
+        "ns",
+        "dB",
+        "dB"
+      ],
+      "data_relative": "2021/m1727x/km/amp_fre_phase/TW",
+      "result_relative": "plot_wavelet_spectrum",
+      "description": "",
+      "time_formats": {
+        "TWkmfpda.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "2": {
+      "file_name": "Hhchan2freq.dat",
+      "var_list": [
+        "Residual Frequency-1",
+        "Residual Frequency-2"
+      ],
+      "unit_list": [
+        "Hz",
+        "Hz"
+      ],
+      "data_relative": "2021/m1a04x_renew",
+      "result_relative": "plot_wavelet_spectrum",
+      "description": "",
+      "time_formats": {
+        "Hhchan2freq.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "3": {
+      "file_name": "BdBdsignum113pll_Ts.dat",
+      "var_list": [
+        "Residual Frequency-1",
+        "Residual Phase-1",
+        "Residual Frequency-2",
+        "Residual Phase-2"
+      ],
+      "unit_list": [
+        "Hz",
+        "rad",
+        "Hz",
+        "rad"
+      ],
+      "data_relative": "2021/outdated/m1a04x_PLL",
+      "result_relative": "plot_wavelet_spectrum",
+      "description": "",
+      "time_formats": {
+        "BdBdsignum113pll_Ts.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    },
+    "4": {
+      "file_name": "BdBdchan3_1frephase1s.dat",
+      "var_list": [
+        "Residual Frequency",
+        "Residual Phase",
+        "Signal Density",
+        "Noise Density"
+      ],
+      "unit_list": [
+        "Hz",
+        "rad",
+        "dB",
+        "dB"
+      ],
+      "data_relative": "2021/m1a04x_renew",
+      "result_relative": "plot_wavelet_spectrum",
+      "description": "",
+      "time_formats": {
+        "BdBdchan3_1frephase1s.dat": "utc_code"
+      },
+      "frequency_signs": {}
+    }
+  }
+}

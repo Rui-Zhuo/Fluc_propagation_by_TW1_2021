@@ -1,16 +1,25 @@
+from pathlib import Path
+GEOMETRY_DIR = Path(__file__).resolve().parent
 import numpy as np
 import spiceypy as spice
 import pandas as pd
 from matplotlib import pyplot as plt
 
-spice.furnsh('E:/Research/Program/else/Sun_Mars_Earth/kernels/de430.bsp')
-spice.furnsh('E:/Research/Program/else/Sun_Mars_Earth/kernels/naif0012.tls')
-spice.furnsh('E:/Research/Program/else/Sun_Mars_Earth/kernels/pck00010.tpc')
-spice.furnsh('E:/Research/Program/else/Sun_Mars_Earth/kernels/earth_000101_240326_240101.bpc')
-spice.furnsh('E:/Research/Program/else/Sun_Mars_Earth/kernels/earth_000101_240326_240101.cmt')
-spice.furnsh('E:/Research/Program/else/Sun_Mars_Earth/kernels/mars_iau2000_v1.tpc')
 Rs_km = 696000
 AU_km = 1.5e8
+
+
+def load_kernels():
+    """Load local ephemerides on first geometry calculation."""
+    if getattr(load_kernels, "loaded", False):
+        return
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels/de430.bsp'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels/naif0012.tls'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels/pck00010.tpc'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels/earth_000101_240326_240101.bpc'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels/earth_000101_240326_240101.cmt'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels/mars_iau2000_v1.tpc'))
+    load_kernels.loaded = True
 
 
 def create_epoch(range_dt, step_td):
@@ -20,14 +29,16 @@ def create_epoch(range_dt, step_td):
 
 
 def get_body_pos(bodyName, epochDt, coord='IAU_SUN'):
+    load_kernels()
     epochEt = spice.datetime2et(epochDt)
     bodyPos, _ = spice.spkpos(bodyName, epochEt, coord, 'NONE', 'SUN')
     return bodyPos
 
 
 def get_station_pos(stationName, epochDt, coord='IAU_SUN'):
+    load_kernels()
     epochEt = spice.datetime2et(epochDt)
-    df = pd.read_csv('E:/Research/Program/else/Sun_Mars_Earth/coordinate_list.txt', sep='\s+', header=None, names=['StationName', 'Number', 'x', 'y', 'z'])
+    df = pd.read_csv(str(GEOMETRY_DIR / 'coordinate_list.txt'), sep='\s+', header=None, names=['StationName', 'Number', 'x', 'y', 'z'])
     dfStations = df[df['StationName'] == stationName]
     stationPosItrs = np.array([dfStations.x.values, dfStations.y.values, dfStations.z.values]).squeeze() / 1e3
     stationPosHelioCentric, _ = spice.spkcpt(stationPosItrs, 'EARTH BARYCENTER', 'ITRF93', epochEt, coord, 'OBSERVER', 'LT', 'SUN')
@@ -110,7 +121,7 @@ if __name__ == '__main__':
     from datetime import datetime, timedelta
 
     epochDt = datetime(2021, 10, 4, 8, 0, 0)
-    df = pd.read_csv('E:/Research/Program/else/Sun_Mars_Earth/coordinate_list.txt', sep='\s+', header=None, names=['StationName', 'Number', 'x', 'y', 'z'])
+    df = pd.read_csv(str(GEOMETRY_DIR / 'coordinate_list.txt'), sep='\s+', header=None, names=['StationName', 'Number', 'x', 'y', 'z'])
     stationNameList = ['JS', 'BD', 'BD', 'BD', 'BD']#df['StationName'].values
     station1Name = stationNameList[0]
     station2Name = stationNameList[1]

@@ -1,3 +1,5 @@
+from pathlib import Path
+GEOMETRY_DIR = Path(__file__).resolve().parent
 import PIL.Image
 import numpy as np
 import spiceypy as spice
@@ -7,14 +9,21 @@ import plotly
 import plotly.graph_objects as go
 import plotly.offline
 
-spice.furnsh('./kernels/de430.bsp')
-spice.furnsh('./kernels/naif0012.tls')
-spice.furnsh('./kernels/pck00010.tpc')
-spice.furnsh('./kernels/earth_000101_240326_240101.bpc')
-spice.furnsh('./kernels/earth_000101_240326_240101.cmt')
-spice.furnsh('./kernels/mars_iau2000_v1.tpc')
 Rs_km = 696000
 AU_km = 1.5e8
+
+
+def load_kernels():
+    """Load local ephemerides on first geometry calculation."""
+    if getattr(load_kernels, "loaded", False):
+        return
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels' / 'de430.bsp'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels' / 'naif0012.tls'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels' / 'pck00010.tpc'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels' / 'earth_000101_240326_240101.bpc'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels' / 'earth_000101_240326_240101.cmt'))
+    spice.furnsh(str(GEOMETRY_DIR / 'kernels' / 'mars_iau2000_v1.tpc'))
+    load_kernels.loaded = True
 
 
 def create_epoch(range_dt, step_td):
@@ -24,14 +33,16 @@ def create_epoch(range_dt, step_td):
 
 
 def get_body_pos(bodyName, epochDt, coord='IAU_SUN'):
+    load_kernels()
     epochEt = spice.datetime2et(epochDt)
     bodyPos, _ = spice.spkpos(bodyName, epochEt, coord, 'NONE', 'SUN')
     return bodyPos
 
 
 def get_station_pos(stationName, epochDt, coord='IAU_SUN'):
+    load_kernels()
     epochEt = spice.datetime2et(epochDt)
-    df = pd.read_csv('coordinate_list.txt', sep='\s+', header=None, names=['StationName', 'Number', 'x', 'y', 'z'])
+    df = pd.read_csv(GEOMETRY_DIR / 'coordinate_list.txt', sep='\s+', header=None, names=['StationName', 'Number', 'x', 'y', 'z'])
     dfStations = df[df['StationName'] == stationName]
     stationPosItrs = np.array([dfStations.x.values, dfStations.y.values, dfStations.z.values]).squeeze() / 1e3
     stationPosHelioCentric, _ = spice.spkcpt(stationPosItrs, 'EARTH BARYCENTER', 'ITRF93', epochEt, coord, 'OBSERVER',
@@ -108,6 +119,7 @@ def get_sphere(R0, lon, lat, for_PSI=False):
 
 
 def plot_planet_model(planet_str, dt, radius=5., transform=False):
+    load_kernels()
     et = spice.datetime2et(dt)
     planet_pos, _ = spice.spkpos(planet_str, et, 'IAU_SUN', 'NONE', 'SUN')
     planet_pos = np.array(planet_pos).T
@@ -135,7 +147,7 @@ def plot_planet_model(planet_str, dt, radius=5., transform=False):
 
     # idx_to_color = np.array(eight_bit_img.getpalette()).reshape(-1, 3)
     # colorscale = [[i / 255.0, 'rgb({},{},{})'.format(*rgb)] for i, rgb in enumerate(idx_to_color)]
-    texture = np.asarray(Image.open('Planet_model/' + planet_str + '.jpeg').convert('L'))
+    texture = np.asarray(Image.open(GEOMETRY_DIR / 'Planet_model' / (planet_str + '.jpeg')).convert('L'))
     if planet_str == 'EARTH BARYCENTER':
         colorscale = [[0.0, 'rgb(20, 20, 200)'],
                       [0.1, 'rgb(30, 30, 190)'],
@@ -196,7 +208,8 @@ def plot_planet_model(planet_str, dt, radius=5., transform=False):
 
 
 if __name__ == '__main__':
-    df = pd.read_csv('coordinate_list.txt', sep='\s+', header=None, names=['StationName', 'Number', 'x', 'y', 'z'])
+    load_kernels()
+    df = pd.read_csv(GEOMETRY_DIR / 'coordinate_list.txt', sep='\s+', header=None, names=['StationName', 'Number', 'x', 'y', 'z'])
     earth_radii = spice.bodvrd('EARTH', 'RADII', 3)
     earth_re = earth_radii[1][0]
     earth_rp = earth_radii[1][2]

@@ -1,1 +1,14 @@
+# Observation data and generated/local products
+data/
+outputs/
+tmp/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.idea/
+.vscode/
+.DS_Store
 Sun_Mars_Earth/kernels/de430.bsp
+Sun_Mars_Earth/*.html
+configure_local.ps1

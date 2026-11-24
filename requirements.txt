@@ -1,0 +1,13 @@
+# Direct dependencies; not a validated lockfile. See README for the local snapshot.
+numpy
+scipy
+pandas
+matplotlib
+pyleoclim
+plotly
+PyWavelets
+astropy
+spiceypy
+openpyxl
+# Optional: jupyter for the retained exploratory notebook.
+# External python_utils_JSHEPT.py and SPICE de430.bsp are supplied separately.

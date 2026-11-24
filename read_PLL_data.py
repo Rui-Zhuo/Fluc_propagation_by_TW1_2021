@@ -1,16 +1,16 @@
-import scipy.io
-import numpy as np
+"""Convert one explicitly selected PLL MAT observation into text."""
+from tw1.io import convert_pll
 
-date = 's1a26x'
-station = 'ur'
 
-read_dir = 'E:/Research/Data/Tianwen/' + date +'/' + station + '/chan3/'
-read_name = 'Time_Frequency_Phase.mat'
-save_dir = 'E:/Research/Data/Tianwen/' + date + '/'
-save_name = station + station + 'chan3_1frephase.dat'
+def main(date='s1a26x', station='ur', channel='chan3', output=None):
+    return convert_pll(date, station, channel=channel, output=output)
 
-mat_data = scipy.io.loadmat(read_dir + read_name)
-data_to_save = mat_data['Fre_Pha_data']
-np.savetxt(save_dir + save_name, data_to_save, fmt='%f')
 
-data = np.loadtxt(save_dir + save_name)
+if __name__ == '__main__':
+    import argparse
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--date', default='s1a26x')
+    parser.add_argument('--station', default='ur')
+    parser.add_argument('--channel', default='chan3')
+    parser.add_argument('--output')
+    main(**vars(parser.parse_args()))

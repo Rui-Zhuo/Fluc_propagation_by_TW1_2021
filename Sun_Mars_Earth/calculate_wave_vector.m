@@ -1,6 +1,7 @@
 clear; close all;
 %% import data
-file_dir = 'E:\Research\Work\tianwen_IPS\base_line_multiple\';
+project_dir = fileparts(fileparts(fileparts(mfilename('fullpath'))));
+file_dir = [fullfile(project_dir, 'RESULT', 'base_line_multiple'), filesep];
 file_name = 'cases.xlsx';
 data = readmatrix([file_dir, file_name]);
 %% extract data
